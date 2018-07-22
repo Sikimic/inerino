@@ -1,0 +1,40 @@
+<ActionBar class="action-bar">
+        <GridLayout width="100%" horizontalAlignment="left" columns="auto, *" rows="auto">
+            <Image src="res://back" class="action-image"  (tap)="goBack()"></Image>
+            <Label col="1" class="action-bar-title text-center" text="{{'addtoken.actionbar' | translate}}"></Label>
+        </GridLayout>
+</ActionBar>
+
+<AbsoluteLayout>
+    <DockLayout class="page" stretchLastChild="true"  height="100%" width="100%">
+        <GridLayout columns="*,*" rows="auto" dock="bottom">
+            <Button class="link m-r-5" text="{{'addtoken.cancel' | translate}}" (tap)="goBack()"></Button>
+            <Button col="1" class="submit-button m-l-5" text="{{'addtoken.submit' | translate}}" (tap)="submit()" [class.disabaled]="!isValidAddress" [isEnabled]="isValidAddress"></Button>
+        </GridLayout>
+        <ScrollView>
+            <StackLayout>
+                <Label class="h2" text="{{'addtoken.address' | translate}}"></Label>
+                <GridLayout columns="*, 42" rows="42, auto" class="address" [class.haserror]="showInvalidAddress">
+                    <TextField #address hint="{{'addtoken.addresstip' | translate}}"
+                        (textChange)="onAddressChange($event)"
+                        secure="false"
+                        returnKeyType="done" 
+                        autocorrect="false"></TextField>
+                    <Label col="1" class="icon" text="&#xf029;" (tap)="scan()" ></Label>
+                    <Label col="0" row="1" *ngIf="showInvalidAddress" class="error" [text]="('addtoken.errors.badaddress' | translate)" textWrap="true" ></Label>
+                </GridLayout>
+                <Label class="h2" text="{{'addtoken.name' | translate}}"></Label>
+                <TextField hint="{{'addtoken.nametip' | translate}}" [text]="name"></TextField>
+
+                <Label class="h2" text="{{'addtoken.symbol' | translate}}"></Label>
+                <TextField hint="{{'addtoken.symboltip' | translate}}" [text]="symbol"></TextField>
+
+                <Label class="h2" text="{{'addtoken.decimals' | translate}}"></Label>
+                <TextField hint="{{'addtoken.decimalstip' | translate}}" [text]="decimals"  keyboardType="number"></TextField>
+            </StackLayout>
+        </ScrollView>
+    </DockLayout>
+    <GridLayout columns="*" rows="*"  height="100%" width="100%" *ngIf="loading">
+        <ActivityIndicator [busy]="loading" width="100" height="100" class="activity-indicator" horizontalAlignment="center" verticalAlignment="center"></ActivityIndicator>
+    </GridLayout>
+</AbsoluteLayout>

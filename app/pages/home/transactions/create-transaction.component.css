@@ -1,0 +1,174 @@
+
+.page {
+    padding-left: 18;
+      padding-right: 18;
+  }
+  
+  .h3 {
+      font-size: 18;
+      color: #666666;
+  }
+  
+  
+  
+  .submit-button {
+      background-color: #1e69f5;
+      color: white;
+     
+    }
+    .avatar { 
+      border-radius: 44;
+      width: 44;
+      height: 44;
+      margin-right: 20;
+      margin-bottom: 30;
+  }
+  
+  
+.icon{
+    font-family: "Font Awesome 5 Free" ,"fa-solid-900","fa-regular-400","fa-brands-400";
+    font-weight: 900;
+    font-size: 24;
+    color: #929292;
+  }
+
+  .hr {
+    height: 16;
+    background-color:#F5F5F5;
+    width:100%
+  }
+  
+
+  
+.gas{
+    font-size: 16;
+    height: 0;
+  }
+  
+  .gas.active {
+    height: auto;
+  }
+  
+  .gas .gas-price {
+    font-size: 16;
+    color: #1e69f5;
+    text-align: right;
+    margin: 0;
+    padding: 10 0;
+    margin-left: 80;
+  }
+  
+  .explain {
+    font-size: 12;
+  }
+  
+  
+  
+  
+  .link {
+    color: #1e69f5;
+  }
+  
+  .error{
+    color: #E01A0D;
+    font-size: 12;
+    margin-right: 0;
+  }
+
+  .address .error {
+    border-bottom-width: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+  }
+
+  
+  .icon-button{
+    color: #353535;
+    border-color: transparent;
+    border-width: 1;
+    background-color: #f2f2f2;
+    font-size: 11;
+    margin: 0;
+    padding: 0;
+    vertical-align: center;
+  }
+  
+  .icon-button.active {
+    color: #1e69f5;
+  }
+  GridLayout.bottom {
+    background-color: #f2f2f2;
+    border-top-width: 1px;
+    border-top-color: #353535;
+  }
+
+  .address TextField {
+      border-bottom-width: 2;
+      border-bottom-color: #8A8A8A;
+      font-size: 12;
+      text-align: left;
+     
+      padding: 6 0;
+  }
+
+  .address  Label {
+    border-bottom-width: 2;
+    border-bottom-color: #8A8A8A;
+    padding: 4;
+    background-color: #F7F7F7;
+  }
+  .amount TextField {
+    border-bottom-width: 2;
+    border-bottom-color: #1E69F5;
+    font-size: 12;
+    text-align: right;
+   
+    padding: 6 0;
+  }
+
+  .amount .currency-select {
+    border-bottom-width: 2;
+    border-bottom-color: #1E69F5;
+    padding: 6 4;
+    background-color: #F7F7F7;
+  }
+
+  .amount .current-balance {
+      font-size: 12;
+      color: #909090;
+      padding: 4 0;
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.picker{
+    background-color: #fff;
+}
+
+ListPicker {
+    width: 50%;
+    color: #828282;
+}
+
+.done {
+    background-color: rgba(248, 248, 248, 0.8);
+    color: #1e69f5;
+    padding: 15;
+    text-align: right;
+}
+
+.tip {
+  color: #1E69F5;
+  font-size: 12;
+  text-align: left;
+  padding-top: 10;
+  padding-bottom: 20;
+}
+
+
+.action-image {
+  width: 33;
+  height: 24;
+  vertical-align: center;
+}

@@ -1,0 +1,116 @@
+
+.page {
+    padding-left: 18;
+    padding-right: 18;
+    height: 100%;
+    width: 100%;
+  }
+  Image {
+    margin-top: 63;
+    margin-bottom: 35;
+    width: 121;
+  }
+
+  .submit-button {
+    background-color: #1e69f5;
+    color: white;
+    margin-top: 20;
+  }
+
+  .submit-button.m-t-0{
+    margin-top: 0;
+  }
+
+  .link {
+    color: #1e69f5;
+  }
+
+  .h2 {
+    font-size: 24;
+    width: 80%;
+  }
+
+  .h3 {
+    font-size: 16;
+    font-weight: 300;
+    font-family: 'Heebo';
+  }
+
+  .mnemonic{
+    border-width: 1;
+    border-color: #E5E5E5;
+    height: 100;
+    border-radius: 4;
+    color: #353535;
+    font-size: 14;
+    padding: 15;
+  }
+
+  .mnemonic.error {
+    border-color: #E01A0D;
+    margin: 0;
+  }
+
+  .mnemonic-cnt {
+    border-width: 1;
+    border-color: #E5E5E5;
+    border-radius: 4;
+    width: 100%;
+  }
+  .mnemonic-cnt .mnemonic {
+    border: none;
+    border-width: 0;
+  }
+
+  .mnemonic-cnt .icon {
+    color: rgba(53, 53, 53, 0.5);
+    padding: 10;
+  }
+
+  .mnemonic-cnt .icon.blue {
+    color: #1e69f5;
+  }
+
+  .error{
+    color: #E01A0D;
+    margin-left: 16;
+    
+    margin-right: 0;
+  }
+  
+  Label.error, .error Label{
+    color: #E01A0D;
+    font-size: 12;
+  }
+  .icon {
+    font-family: "Font Awesome 5 Free" ,"fa-solid-900","fa-regular-400","fa-brands-400";
+    font-weight: 400;
+    margin-right: 10;
+    padding-top:2;
+ }
+
+ .orlbl {
+   color: #1e69f5;
+   font-size: 16;
+ }
+
+ .blue {
+  color: #1e69f5;
+ }
+
+ .btn-cnt {
+   margin-bottom: 30;
+ }
+
+ .action-image {
+  width: 22;
+  height: 22;
+  vertical-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.action-bar-title {
+  margin-right: 30;
+}

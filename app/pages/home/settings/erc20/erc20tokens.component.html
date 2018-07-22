@@ -1,0 +1,57 @@
+<ActionBar class="action-bar">
+        <GridLayout width="100%" horizontalAlignment="left" columns="auto, *" rows="auto">
+            <Image src="res://back" class="action-image"  (tap)="goBack()"></Image>
+            <Label col="1" class="action-bar-title text-center" text="{{'tokens.actionbar' | translate}}"></Label>
+        </GridLayout>
+</ActionBar>
+<AbsoluteLayout>
+        <DockLayout stretchLastChild="true"  height="100%" width="100%">
+            <Button dock="bottom" class="addbtn"  [nsRouterLink]="['/home/add-token']" pageTransition="slide">
+                <FormattedString>
+                    <Span text="{{'tokens.addmanualy' | translate}}"></Span>
+                    <Span text=" &#xf067;" fontFamily="'Font Awesome 5 Free', 'fa-solid-900'" fontWeight="900"></Span>
+                </FormattedString>
+            </Button>
+            <StackLayout  dock="top" class="page">
+                <Label class="h3" text="{{'tokens.title' | translate}}"></Label>
+                <Label class="body" text="{{'tokens.description' | translate}}"  textWrap="true"></Label>
+                <GridLayout columns="auto, auto, *" rows="auto" class="m-y-10">
+                    <Label col="0" class="body" text="{{'tokens.auto.title' | translate}}" verticalAlignment="center"  ></Label>
+                    <Label col="1" class="icon p-x-10" [class.blue]="tip" verticalAlignment="center"  text="&#xf05a;" (tap)="showTip()"></Label>
+                    <Switch #switch col="2" horizontalAlignment="right" verticalAlignment="center" checked="false" (checkedChange)="onAuto($event)" ></Switch>
+                </GridLayout>
+                <Label *ngIf="tip" class="body blue p-b-10" text="{{'tokens.auto.tip' | translate}}" textWrap="true"></Label>
+            </StackLayout>  
+            <StackLayout dock="top" class="hr"></StackLayout> 
+            <SearchBar width="100%"  hint="{{'tokens.search' | translate}}" (textChange)="onTextChange($event)" 
+                (submit)="onSubmit($event)" (loaded)="onSearchBarLoaded($event)" (clear)="onClear($event)" dock="top"></SearchBar>
+            <GridLayout class="page" columns="*" rows="*" dock="top">
+                <RadListView #list [items]="tokens" (itemTap)="onItemTap($event)" [itemTemplateSelector]="templateSelector" >
+                        <ng-template tkListItemTemplate let-item="item">
+                            <GridLayout columns="32, *, auto" rows="25" class="m-y-5">
+                                <Image [src]="item.ico" class="token-ico" ></Image>
+                                <Label col="1" verticalAlignment="center"  class="nsymbol">
+                                    <FormattedString>
+                                        <Span [text]="item.symbol" fontSize="18"></Span>
+                                        <Span [text]="' - ' + item.name" fontWeight="300"></Span>
+                                    </FormattedString>
+                                </Label>
+                                <Label col="2" verticalAlignment="center" class="text-right icon-r small" text="&#xf0fe;"></Label>
+                            </GridLayout>
+                        </ng-template>
+                        <ng-template tkTemplateKey="selected" let-item="item" let-i="index">
+                            <GridLayout columns="32, *, auto" rows="25" class="m-y-5">
+                                <Image [src]="item.ico" class="token-ico" ></Image>
+                                <Label col="1" verticalAlignment="center" class="nsymbol">
+                                    <FormattedString>
+                                        <Span [text]="item.symbol" fontSize="18"></Span>
+                                        <Span [text]="' - ' + item.name" fontWeight="300"></Span>
+                                    </FormattedString>
+                                </Label>
+                                <Label col="2" verticalAlignment="center" class="text-right icon small blue" text="&#xf00c;"></Label>
+                            </GridLayout>
+                        </ng-template>
+                </RadListView>
+            </GridLayout>
+        </DockLayout>
+</AbsoluteLayout>

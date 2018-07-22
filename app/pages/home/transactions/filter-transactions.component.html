@@ -1,0 +1,48 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title text-center" text="{{'transactionsfilter.actionbar' | translate}}"></Label>
+    <ActionItem (tap)="goBack()" ios.position="right" android.position="actionBar">
+        <Label class="icon action-bar-icon p-y-10" text="&#xf078;"></Label>
+   </ActionItem>
+</ActionBar>
+
+<DockLayout stretchLastChild="true"  height="100%" width="100%">
+    <GridLayout class="page m-b-10" columns="*,*" rows="auto" dock="bottom">
+        <Button class="link m-r-5" text="{{'transactionsfilter.reset' | translate}}" (tap)="reset()"></Button>
+        <Button col="1" class="submit-button m-l-5" text="{{'transactionsfilter.apply' | translate}}" (tap)="apply()"></Button>
+    </GridLayout>
+    <ScrollView height="100%" width="100%" dock="top">
+        <StackLayout>
+            <StackLayout class="page">
+                <Label class="h3" text="{{'transactionsfilter.status' | translate}}" textWrap="true"></Label>
+                <GridLayout columns="auto, *" rows="auto, auto, auto" class="lnk">
+                    <Label col="0" text="{{'transactionsfilter.inprogress' | translate}}" textWrap="true" (tap)="checkToggle('status.pending')"></Label>
+                    <Label col="1" [class.white]="!isActive('status.pending')" class="text-right icon small blue" text="&#xf00c;" textWrap="true" (tap)="checkToggle('status.pending')"></Label>
+                    <Label row="1" col="0" text="{{'transactionsfilter.completed' | translate}}" textWrap="true" (tap)="checkToggle('status.completed')"></Label>
+                    <Label row="1" col="1"  [class.white]="!isActive('status.completed')"  class="text-right icon small blue" text="&#xf00c;" textWrap="true" (tap)="checkToggle('status.completed')"></Label>
+                    <Label row="2" col="0" text="{{'transactionsfilter.failed' | translate}}" textWrap="true" (tap)="checkToggle('status.failed')"></Label>
+                    <Label row="2" col="1"  [class.white]="!isActive('status.failed')"  class="text-right icon small blue" text="&#xf00c;" textWrap="true" (tap)="checkToggle('status.failed')"></Label>
+                </GridLayout>
+            </StackLayout>
+            <StackLayout class="hr"></StackLayout>
+            <StackLayout class="page">
+                <Label class="h3" text="{{'transactionsfilter.direction' | translate}}" textWrap="true"></Label>
+                <GridLayout columns="auto, *" rows="auto, auto" class="lnk">
+                    <Label col="0" text="{{'transactionsfilter.sent' | translate}}" textWrap="true" (tap)="checkToggle('direction.sent')"></Label>
+                    <Label col="1" [class.white]="!isActive('direction.sent')"  class="text-right icon small blue" text="&#xf00c;" textWrap="true" (tap)="checkToggle('direction.sent')"></Label>
+                    <Label row="1" col="0" text="{{'transactionsfilter.received' | translate}}" textWrap="true" (tap)="checkToggle('direction.received')"></Label>
+                    <Label row="1" [class.white]="!isActive('direction.received')"  col="1" class="text-right icon small blue" text="&#xf00c;" textWrap="true" (tap)="checkToggle('direction.received')"></Label>
+                </GridLayout>
+            </StackLayout>
+            <StackLayout class="hr"></StackLayout>
+            <StackLayout class="page">
+                <Label class="h3" text="{{'transactionsfilter.token' | translate}}" textWrap="true"></Label>
+                <WrapLayout orientation="horizontal" width="100%" >
+                    <Label *ngFor="let token of tokens; let i = index;" [text]="token.symbol" class="token" 
+                        [class.active]="isTokenActive(token.symbol)"
+                        [class.last]="(i % 4) == 3" [class.first]="(i % 4) == 0"
+                        (tap)="toggleToken(token.symbol)"></Label>
+                </WrapLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</DockLayout>

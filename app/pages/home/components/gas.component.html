@@ -1,0 +1,25 @@
+<GridLayout columns="auto, *" rows="auto, auto" class="m-t-25 gas-title">
+        <Label col="0" class="h3 text-left" text="{{'transactionpreview.gasfee' | translate}}" textWrap="true"></Label>
+        <Label col="1" class="icon-s text-right" [class.blue]="showExplain" text="&#xf05a;" textWrap="true" (tap)="toggleExplain()"></Label>
+    </GridLayout>
+<GridLayout columns="*, *" rows="auto, auto, auto"  class="m-b-20">
+    <Label class="blue text-left" col="0" [text]="transactionPrice + ' ' + ('strings.crypto.eth' | translate)" textWrap="true"></Label>
+    <Label class="text-right" col="1"  [text]="((transactionPrice * ethRate) | number:'1.0-2')+ ' ' + currencySymbol" textWrap="true"></Label>
+    <Label row="2" colSpan="2" [text]="('transactionpreview.currentbalance' | translate) + (balance | number:'1.05') + ('strings.crypto.eth' | translate)" textWrap="true" class="balance"></Label>
+</GridLayout>
+
+<GridLayout columns="*, *" rows="auto, auto, auto"  class="gas" *ngIf="showExplain">
+    <Label col="0" text="{{'transactionpreview.gasestimated' | translate}}" textWrap="true"></Label>
+    <Label col="1" [text]="gas" class="text-right" textWrap="true"></Label>
+    <Label  col="0" row="1" text="{{'transactionpreview.gasprice' | translate}}" textWrap="true" class="p-t-10"></Label>
+    <TextField col="1" row="1" hint="{{'transactionpreview.gasprice' | translate}}" minvalue="0"
+        [text]="gasPrice"
+        (textChange)="onChange($event)"
+        secure="false"
+        keyboardType="number"
+        returnKeyType="done" 
+        autocorrect="false"
+        class="gas-price"></TextField>
+
+    <Label  row="2" colSpan="2" class="explain blue" text="{{'transactionpreview.gasexplain' | translate}}" textWrap="true" ></Label>
+</GridLayout>

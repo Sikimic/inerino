@@ -1,0 +1,258 @@
+{
+    "terms": {
+        "actionbar": "PumaPay",
+        "title": "Terms of use",
+        "desc": "PumaPay Wallet allows you to create or access your existing Ethereum Account",
+        "accept": "Accept Terms to move forward"
+    },
+    "create": {
+        "title": "Create or access your existing Ethereum Account",
+        "desc": "To access your Account, use the auto-generated 12-word seed phrase given below. Your seed is the primary key to your Ethereum Account with PumaPay. Keep it safe.",
+        "passhint": "Type password",
+        "confirmhint": "Confirm password",
+        "create": "Create your Ethereum Account",
+        "restore": "Access your existing Ethereum Account",
+        "copied": "My seed phrase is protected",
+        "saveseed": "Save seed phrase",
+        "confirm": {
+            "title": "Is your seed safe?",
+            "message": "Please note that we do not store your seed phrase on the PumaPay server, and hence we will not be able to restore your account, nor will we be able to recover it for you. For your own security, save your seed phrase on both an external electronic and a hard-copy .",
+            "ok": "Yes, it's safe",
+            "cancel": "Cancel"
+        }
+    },
+    "login" : {
+        "title": "Access your account",
+        "passhint": "Enter password",
+        "submit": "Login",
+        "restore": "Restore from seed",
+        "or": "OR"
+    },
+    "restore" : {
+        "title": "Restore from Seed",
+        "passhint": "Type password",
+        "confirmhint": "Confirm password",
+        "access": "Access Account",
+        "continue": "Continue",
+        "seedhint": "Enter your 12 words phrase",
+        "desc" : "Enter your 12-word seed phrase below to access your Ethereum Account",
+        "passdesc": "Create password to protect your seed"
+    },
+    "changepassword": {
+        "title": "Change Password",
+        "crrpasshint": "Current password",
+        "passhint": "New password",
+        "confirmhint": "Confirm new password",
+        "submit": "Update password"
+    },
+    "nav": {
+        "account": "Account",
+        "transactions": "Ledger",
+        "qr": "QR Code",
+        "partners": "Partners",
+        "scan": {
+            "cancel": "Cancel",
+            "msg": "Align QR Code within frame to scan. \n This transaction will be active for 2 minutes."
+        }
+    },
+    "transaction": {
+        "gasfee": "Gas fee:",
+        "eth": "ETH",
+        "etherscanlink": "Full transaction details on Etherscan",
+        "completed": "Completed",
+        "failed": "Failed",
+        "inprogress": "In Progress",
+        "sentto": "Sent to: ",
+        "from": "From: ",
+        "description": "Description: ",
+        "nametip": "The name & description relating to this transaction have been provided by the merchant generating the QR code, and as such, in no way is PumaPay to be held responsible for any error that may be contained therein."
+    },
+    "account": {
+        "title": "My Account",
+        "scan": "Scan Request",
+        "send": "Send",
+        "ethaddress": "Ethereum address",
+        "ethtip": "Your Ethereum address is needed to transfer tokens from & to your account",
+        "balance": "Balance",
+        "copied": "Copied to clipboard",
+        "viewqr": "View as QR code",
+        "popuptitle": "Your ETH address",
+        "popupcta": "Share",
+        "token": {
+            "title": " token",
+            "visit": "Visit Etherscan.io",
+            "cancel": "Cancel",
+            "remove": "Remove"
+        }
+    },
+    "about": {
+        "title": "About App",
+        "devby": "Developed by ",
+        "devbylink": " Decentralized.vision",
+        "pma": "PumaPay ",
+        "pmalink": "pumapay.io",
+        "version": "Version 1.1",
+        "versionp": "Version {{version}}"
+    },
+    "settings": {
+        "title": "Settings",
+        "preferences": "Account Preferences",
+        "language": "Language",
+        "currency": "Local Currency",
+        "network": "Network",
+        "privacy": "Privacy & Security",
+        "changepass": "Change Password",
+        "about": "About",
+        "aboutapp": "About App",
+        "terms": "Terms of Use",
+        "privacypolicy": "Privacy Policy",
+        "done": "Done",
+        "logout": "Logout",
+        "tokens": "Tokens"
+    },
+    "tokens": {
+        "actionbar": "Tokens",
+        "title": "Add or remove tokens from your wallet",
+        "description": "Selected tokens will be displayed in your balance, transaction history & sending options.",
+        "auto":  {
+            "title": "Add received tokens automatically",
+            "tip": "When enabled, tokens received to your Ethereum address will be added automatically to the wallet balance, history & sending options."
+        },
+        "addmanualy": "Add Token Manually ",
+        "search": "Search popular tokens"
+    },
+    "addtoken": {
+        "actionbar": "Add Token Manually",
+        "cancel": "Cancel",
+        "submit": "Submit",
+        "address": "Token Contract Adress",
+        "addresstip": "Type manually or scan qr code",
+        "errors": {
+            "badaddress": "* Incorrect address."
+        },
+        "name": "Name",
+        "nametip": "Type name here",
+        "symbol": "Token Symbol",
+        "symboltip": "Type symbol here",
+        "decimals": "Decimals Maximum",
+        "decimalstip": "Type number here"
+    },
+    "transactionsfilter": {
+        "actionbar": "Filter Transactions",
+        "reset": "Reset",
+        "apply": "Apply",
+        "status": "Status",
+        "inprogress": "In Progress",
+        "completed": "Completed",
+        "failed": "Failed",
+        "direction": "Direction",
+        "sent": "Sent",
+        "received": "Received",
+        "token": "Token"
+    },
+    "pasttransactions": {
+        "title": "Ledger",
+        "empty": {
+            "title": "Welcome to transactions history page!",
+            "body": "Well, there is still no received or sent transactions yet. The history list will appear in the moment you’ll made one.",
+            "make": "Make your first transaction"
+        }
+    },
+    "transactionpreview": {
+        "title": "Confirm Transaction",
+        "submit": "Submit",
+        "cancel" : "Cancel",
+        "accepted": "Your transaction has been accepted",
+        "declined": "Your transaction has been declined",
+        "received": "Your account has been funded, check your balance",
+        "wait": "Please wait while we the transaction is being processed",
+        "currentbalance": "Your current balance: ",
+        "willexpire": "Will expire in: ",
+        "expired": "Your time has lapsed, recreate transaction.",
+        "sendto": "Send to ",
+        "amount": "Amount",
+        "pma": "PMA",
+        "eth": "ETH",
+        "gasfee": "Transaction Fee",
+        "gasexplain": "The transaction fee is payable to miners, who include the transaction in the block. The cost amount consists of Gas Limit and Gas Price. Gas Limit: The maximum amount of gas units you spend on a transaction. Gas price: The amount payable per gas unit. The higher the gas price, the faster the transaction.",
+        "gasestimated": "Gas limit",
+        "gasprice": "Gas price (Gwei)",
+        "nameexplain": "The name & description relating to this transaction have been provided by the merchant generating the QR code, and as such, in no way is PumaPay to be held responsible for any error that may be contained therein.",
+        "confirm": {
+            "title": "Transaction from unauthorized source",
+            "message": "Are you sure you want to execute transaction from unauthorized source?",
+            "ok": "YES",
+            "cancel": "Cancel"
+        },
+        "alert": {
+            "title": "Network not matched",
+            "message": "In order to complete this transaction you need to change your network to {{network}} \n Go to the app settings, change your network and scan the transaction again.",
+            "ok": "Ok"
+        },
+        "badqr": {
+            "title": "Something goes wrong",
+            "message": "QR code bad format",
+            "ok": "Try again"
+        }
+    },
+    "createtransaction": {
+        "title": "Create New Transaction",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "sendto": "Send to ETH address",
+        "hint": "Recipient wallet address",
+        "amount": "Amount",
+        "currentbalance": {
+            "pma": "Your current balance: ",
+            "eth": "Your current balance minus fee: "
+        },
+        "errors": {
+            "badaddress": "* Unknown address",
+            "badamount": "* Amount are higher than balance",
+            "badgas": "* Fee is higher than balance"
+        }
+    },
+    "partners": {
+        "title": "Partners",
+        "subtitle": "Our early contributors accept",
+        "check": "Check them out"
+    },
+    "generictext": {
+        "terms": {
+            "title": "Terms of Use",
+            "content": "<!doctype html><html lang=\"en\"><head> <meta charset=\"utf-8\"> <title></title> <link href=\"https://fonts.googleapis.com/css?family=Heebo:300,400\" rel=\"stylesheet\"> <style>body *{font-family: 'Heebo', sans-serif;color: #353535;}p{font-size: 14px;line-height: 19px;}h1{font-size: 18px;line-height: 21px;color: #666666;}</style></head><body><p align=\"center\" dir=\"LTR\"> <strong>PUMAPAY TERMS &amp; CONDITIONS</strong></p><p dir=\"LTR\"> <strong>Last updated</strong> : April 25<sup>th</sup>, 2018.</p><p dir=\"LTR\"> The Services (as defined below) are subject to these terms and conditions (\"<strong>Terms</strong>\"). By accessing, downloading or using the Services, you (“<strong>you</strong>” or “<strong>your</strong>”) agree that you have read, understood and agree to these Terms which shall form alegal agreement between you and Decentralized Vision Ltd. (\"<strong>us</strong>\", \"<strong>we</strong>\", \"<strong>our</strong>\" or \" <strong>PumaPay</strong>\").</p><p dir=\"LTR\"> 1. Definitions and Interpretation</p><p dir=\"LTR\"> 1.1 <strong>\"Applicable Laws\"</strong> means all applicable statutes, enactments, acts of the state legislature or parliament, laws, ordinances, rules, bye-laws, regulations, notifications, guidelines, directions, directives and orders of any governmental authority, statutory authority, tribunal, board, court or recognized stock exchange, as may be applicable, international treaties and regulations.</p><p dir=\"LTR\"> 1.2 <strong>\"Cryptocurrency\"</strong> means any cryptocurrency supported by the Services and excluding, unless expressly specified by PumaPay on the Services, any derivative coins or tokens which interact with the aforesaid cryptocurrency. <strong></strong></p><p dir=\"LTR\"> 1.3 \"<strong>Digital Assets</strong>\" means any decentralized digital or virtual currency that can be earned or exchanged on through the Services.</p><p dir=\"LTR\"> 1.4 \"<strong>Intellectual Property Rights\"</strong> means all intellectual property rights, including, without limitation: (a) all inventions, whether patentable or not, all improvements thereto and derivatives thereof, and all patents and patent applications; (b) all registered and unregistered marks, domain names and registrations and applications for registration thereof; (c) all copyrights in copyrightable works, all other rights of authorship, including without limitation moral rights, and all applications and registrations in connection therewith; (d) all trade secrets and confidential business and technical information (including, without limitation, research and development, programming, know-how, proprietary knowledge, financial and marketing information, business plans, formulas, technology, engineering, production, operation and any enhancements or modifications relating thereto, and other designs, drawings, engineering notebooks, industrial models, software and specifications); (e) all rights in databases and data compilations, whether or not copyrightable; and (f) all copies and tangible embodiments of any or all of the foregoing (in whatever form, including electronic media).<strong> </strong></p><p dir=\"LTR\"> 1.5 <strong>\"Losses\"</strong> means all penalties, losses, settlement sums, costs (including legal fees and expenses on a solicitor-client basis), charges, expenses, actions, proceedings, claims, demands and other liabilities, whether foreseeable or not.</p><p dir=\"LTR\"> 1.6 <strong>\"Platform\"</strong> means the online platform owned andoperated by PumaPay, and which is accessible at <a href=\"http://www.pumapay.io/\">www.pumapay.io</a></p><p dir=\"LTR\"> 1.7 \"<strong>Privacy Policy</strong>\" as available at: <a href=\"https://pumapay.io/docs/privacypolicy.pdf\"> https://pumapay.io/docs/privacypolicy.pdf </a> , as may be amended from time to time.</p><p dir=\"LTR\"> 1.8 <strong>\"Risk Disclaimer\"</strong> as available at <a href=\"https://pumapay.io/docs/legal-considerations-risks-disclaimer.pdf\"> https://pumapay.io/docs/legal-considerations-risks-disclaimer.pdf </a> , as may be amended from time to time.</p><p dir=\"LTR\"> 1.9 <strong>\"Services\"</strong> means the Platform and any services which are made available from time to time by PumaPay through the Platform, including any downloadable software which PumaPay may include as part of the foregoing (“<strong>Software</strong>”).</p><p dir=\"LTR\"> 2. Service</p><p dir=\"LTR\"> 2.1 Subject to these Terms, we hereby grant to you a non-exclusive, non-transferable, revocable license to use the Services under these Terms.</p><p dir=\"LTR\"> 2.2 You may use the Services to:</p><p dir=\"LTR\"> (a) Generate and store Cryptocurrency wallet addresses; and</p><p dir=\"LTR\"> (b) Submit transaction requests relating to any Cryptocurrency to the relevant cryptocurrency network in accordance with the instructions you provide via the Services.</p><p dir=\"LTR\"> 2.3 By submitting any transaction request, you authorize PumaPay to submit your transaction request to the relevant third party networks in accordance with the directions you provide.</p><p dir=\"LTR\"> 2.4 You are not permitted to re-distribute the Services, modify any code or use any content made available through the Services (including images and text), as part of any other software or project of any kind.</p><p dir=\"LTR\"> 2.5 You may download, install and use the Software for your personal purposes only:</p><p dir=\"LTR\"> (a) on one central processing unit (CPU) if the license is a single-user license or the Software is for single use;</p><p dir=\"LTR\"> (b) Provided it is used on only one computer at any one time, transfer the Software from one computer to another;</p><p dir=\"LTR\"> (c) Make up to a reasonable number of copies of the Software for backup purposes only; and</p><p dir=\"LTR\"> (d) Receive and use any free supplementary software code or update of the Software incorporating \"patches\" and corrections of errors as may be provided by us from time to time.</p><p dir=\"LTR\"> 2.6 By accessing, using or downloading the Services, you hereby agree to the Risk Disclaimer and to the Privacy Policy which are incorporated herein by reference.</p><p dir=\"LTR\"> 3. Restrictions</p><p dir=\"LTR\"> 3.1 By accessing or using the Services, you represent and warrant on an ongoing basis that you shall:</p><p dir=\"LTR\"> (a) be of the legal age of majority in your jurisdiction and you have the capacity to enter into these Terms and the transactions contemplated under these Terms;</p><p dir=\"LTR\"> (b) be responsible for your own Digital Assets;</p><p dir=\"LTR\"> (c) carefully guard your private keys;</p><p dir=\"LTR\"> (d) ensure that your device(s) are fully updated and do not contain viruses, malware or otherwise malicious software; and</p><p dir=\"LTR\"> (e) comply with all applicable technology control laws and regulations, including any Applicable Laws..</p><p dir=\"LTR\"> 3.2 You shall not misuse the Services or do (or attempt to do) any of the following acts:</p><p dir=\"LTR\"> (a) violate any Applicable Laws;</p><p dir=\"LTR\"> (b) infringe any of the Intellectual Property Rights of any party;</p><p dir=\"LTR\"> (c) make alterations to, or modifications of, the whole or any part of the Services, nor permit the Services or any part of it to be combined with, or become incorporated in, any other programs;</p><p dir=\"LTR\"> (d) provide or otherwise make available the Services in whole or in part (including but not limited to program listings, object and source program listings, object code and source code), in any form to any person;</p><p dir=\"LTR\"> (e) harvest or otherwise collect personal data about other users of the Services;</p><p dir=\"LTR\"> (f) publish, distribute, sell, disclose, market, sublicense, rent, lease, display, provide, transfer or make available the Services, any portion thereof or any content displayed therein, to any third party, except as explicitly permitted in these Terms or with our prior permission;</p><p dir=\"LTR\"> (g) decompile, reverse engineer, disassemble, enhance, or otherwise make any attempt to discover the source code of, modify, reproduce, hack, or create derivative works from the Services or any portion thereof or any content displayed therein;</p><p dir=\"LTR\"> (h) engage in any unlawful or fraudulent activity, including (for example) any transactions involving prohibited or controlled substances, illegal content and services, money-laundering or the funding of terrorism; or</p><p dir=\"LTR\"> (i) use the Services in any manner which may interfere with, disrupt, disable, overburden or impair the any server of PumaPay, any computer system or network connected to the server of PumaPay.</p><p dir=\"LTR\"> 4. No Control Over Blockchain</p><p dir=\"LTR\"> 4.1 PumaPay is not the creator of, and does not have any control over, any of the Digital Assets that the PumaPay Software allows you to use. You shall be solely responsible for your choice of and use of Digital Assets.</p><p dir=\"LTR\"> 5. Links to third party sites</p><p dir=\"LTR\"> 5.1 The Services may be integrated with third party services. Although the Services make it easy to engage with integrated third parties, PumaPay shall not be responsible for any consequences resulting from your use of third party integrated services. The inclusion of any such links is not an endorsement or verification of such linked websites or content, and any access or use of such linked websites or content is entirely at your own risk. If you require assistance with a third-party integration then you should contact that third-party.</p><p dir=\"LTR\"> 6. Specifically Disclaimed Risks</p><p dir=\"LTR\"> 6.1 Using Digital Asset-related software necessarily entails many risks. PumaPay specifically disclaims and shall have no liability to you for the following risks:</p><p dir=\"LTR\"> (a) Digital Assets are not backed by governments or central banks. They are not protected by government deposit protection schemes. Digital Assets may be extremely volatile. Virtual Currency technology is extremely nascent and unproven. Virtual Currency software and providers are regularly subject to hacking attempts resulting in loss of funds. PumaPay is not the creator of, and does not have any control over, any of the Digital Assets that the PumaPay Software allows you to use. You shall be solely responsible for your choice of and use of Digital Assets;</p><p dir=\"LTR\"> (b) A Digital Assets protocol may fail resulting in total loss of Digital Assets held by users;</p><p dir=\"LTR\"> (c) Disasters may damage the Digital Assets systems resulting in loss of Digital Assets held by users;</p><p dir=\"LTR\"> (d) operating system failures (mobile or desktop);</p><p dir=\"LTR\"> (e) interactions between your hardware, software and the Services;</p><p dir=\"LTR\"> (f) cloud backup software (e.g. certain Android distributions) may upload your private files/information to third party services;</p><p dir=\"LTR\"> (g) malware, viruses or other malicious software on your device that is able to take control of or interfere with the Services;</p><p dir=\"LTR\"> (h) communication delays between your Software and a node or relay service for a Digital Asset (and vice versa); and</p><p dir=\"LTR\"> (i) failure to achieve a certain market value/price for a Digital Asset, whether through a third-party service or any other kind of transaction (i.e. due to delays).</p><p dir=\"LTR\"> 7. Modifications</p><p dir=\"LTR\"> 7.1 PumaPay may, from time to time and without giving any reason or notice,modify, upgrade, suspend, or discontinue (the <strong>\"Modifications\"</strong>) the Platform, the Services or any part thereof. PumaPay shall not be liable if any Modification affects your use of the Services.</p><p dir=\"LTR\"> 7.2 PumaPay reserves the right to update or amend these Terms at its sole and absolute discretion, and the most current version will always be posted on our website (as reflected in the \"Last Updated\" heading). It is your responsibility to review these Terms on a periodical basis. If you use the Platform or the Services after the Terms are posted online, you are deemed to have accepted any Modifications. If you do not accept the updated Terms, your sole and exclusive remedy is to stop access to and use of the Platform and the Services.</p><p dir=\"LTR\"> 8. Limitation of Warranty and Liability</p><p dir=\"LTR\"> 8.1 The Services are provided to you on an “AS IS” and “AS AVAILABLE” basis and without any warranty, to the maximum extent permissible by law. No representations or warranties of any kind, implied, express or statutory, including the warranties of non-infringement of third party rights, title, merchantability, satisfactory quality or fitness for a particular purpose, are given in conjunction with the Services. Without prejudice to the generality of the foregoing, PumaPay does not warrant any of the following:</p><p dir=\"LTR\"> (a) the accuracy, timeliness, adequacy, commercial value or completeness of all data and information contained in the Services;</p><p dir=\"LTR\"> (b) that the Services are free from any computer viruses or other malicious, destructive or corrupting code, agent, program or macros; or</p><p dir=\"LTR\"> (c) the security of any information transmitted by you or to you through the Services, and you accept the risk that that any information transmitted or received through the Services may be, for example, accessed by unauthorized third parties or disclosed by PumaPay or its officers, employees or agents to third parties purporting to be you or purporting to act under your authority. Transmissions over the Internet and electronic mail may be subject to interruption, transmission blackout, delayed transmission due to internet traffic or incorrect data transmission due to the public nature of the Internet.</p><p dir=\"LTR\"> 8.2 We will not be liable or responsible for any act or event beyond our control, including without limitation the matters listed in Clause 6.</p><p dir=\"LTR\"> 8.3 To the maximum extent permitted by law, we (including our and our subsidiaries’ shareholders, directors, officers, employees, and agents) shall not be liable for any personal injury, indirect, incidental, special, exemplary, consequential or punitive damages, or any loss of profits or revenues (regardless of whether we were advised of the possibility of such damages), whether incurred directly or indirectly, or any loss of data, use, good-will, or other intangible losses, resulting from (a) your access to or use of or inability to access or use the Services; (b) any conduct or content of any third party on the Services. In no event shall our (including our and our subsidiaries’ shareholders, directors, officers, employees, and agents) aggregate liability for all claims relating to the Services exceed one hundred U.S. Dollars (U.S. $100.00). Applicable Laws may not allow the limitation or exclusion of liability or incidental or consequential damages, so the above limitation or exclusion may not apply to you. In such cases, our liability will be limited to the fullest extent permitted by Applicable Laws.</p><p dir=\"LTR\"> 8.4 You agree to indemnify PumaPay against any Losses incurred due to your use (or misuse) of the Services.</p><p dir=\"LTR\"> 9. Termination</p><p dir=\"LTR\"> 9.1 PumaPay reserves the right to terminate these Terms with immediate effect, or to disable, suspend or terminate your access to and use of the Services, without giving any reason, notice or liability to you.</p><p dir=\"LTR\"> 9.2 You may terminate these Terms by ceasing use of the Platform and the Services at any time and you need not specifically inform PumaPay when you cease to use the Platform and Services.</p><p dir=\"LTR\"> 9.3 Upon termination for any reason:</p><p dir=\"LTR\"> (a) all rights granted to you under this license shall cease;</p><p dir=\"LTR\"> (b) you must immediately cease all activities authorized by these Terms; and</p><p dir=\"LTR\"> (c) you must immediately delete or remove the Software from all computer equipment in your possession, and immediately destroy or return to us (at our option) all copies of the Software and documents then in your possession, custody or control and, in the case of destruction, certify to us that you have done so.</p><p dir=\"LTR\"> 10. Downloading Application from the App StoreS</p><p dir=\"LTR\"> 10.1 The following applies to any Application accessed through ordownloaded from the Apple App Store or Google Play Store (\" <strong>App Store Sourced Application</strong>\")<strong>:</strong></p><p dir=\"LTR\"> (a) You acknowledge and agree that (i) these Terms are concluded between you and PumaPay only, and not Apple; and (ii) PumaPay, not Apple Google Play Store, is solely responsible for the App Store Sourced Application and content thereof. Your use of the App Store Sourced Application must comply with the App Store Terms of Services.</p><p dir=\"LTR\"> (b) You acknowledge that Apple Google Play Store has no obligation whatsoever to furnish any maintenance and support services with respect to the App Store Sourced Application.</p><p dir=\"LTR\"> (c) You and PumaPay acknowledge that, as between PumaPay and Apple or Google Play Store, Apple and Google Play Store is not responsible for addressing any claims you have or any claims of any third party relating to the App Store Sourced Application or your possession and use of the App Store Sourced Application, including, but not limited to: (i) product liability claims; (ii) any claim that the App Store Sourced Application fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer protection or similar legislation.</p><p dir=\"LTR\"> (d) You and PumaPay acknowledge that, in the event of any third party claim that the App Store Sourced Application or your possession and use of that App Store Sourced Application infringes that third party's intellectual property rights, as between PumaPay and Apple or Google Play Store, PumaPay, not Apple or Google Play Store, will be solely responsible for the investigation, defense, settlement and discharge of any such intellectual property infringement claim to the extent required by these Terms.</p><p dir=\"LTR\"> (e) You and PumaPay acknowledge and agree that Apple or Google Play Store, and Apple or Google Play Store’s subsidiaries, are third party beneficiaries of these Terms as related to your license of the App Store Sourced Application, and that, upon your acceptance of the terms and conditions of these Terms, Apple or Google Play Store will have the right (and will be deemed to have accepted the right) to enforce these Terms as related to your license of the App Store Sourced Application against you as a third party beneficiary thereof.</p><p dir=\"LTR\"> (f) Without limiting any other terms of these Terms, you must comply with all applicable third party terms of agreement when using the App Store Sourced Application.</p><p dir=\"LTR\"> 11. Miscellaneous</p><p dir=\"LTR\"> 11.1 We may transfer our rights and obligations under this License to another organization, but this will not affect your rights or our obligations under this License.</p><p dir=\"LTR\"> 11.2 You may only transfer your rights or your obligations under this License to another person if we agree in writing.</p><p dir=\"LTR\"> 11.3 Our failure to enforce any part of these Terms shall not constitute a waiver of our right to later enforce that or any other part of these Terms. Waiver of compliance in any particular instance does not mean that we will waive compliance in the future. In order for any waiver of compliance with these Terms to be binding, we must provide you with written notice of such waiver through one of our authorized representatives.</p><p dir=\"LTR\"> 11.4 If at any time any provision of these Terms shall be or shall become illegal, invalid or unenforceable in any respect, the legality, validity and enforceability of the remaining provisions of these Terms shall not be affected or impaired thereby, and shall continue in force as if such illegal, invalid or unenforceable provision was severed from these Terms.</p><p dir=\"LTR\"> 11.5 These Terms constitutes the entire agreement between us and supersedes and extinguishes all previous agreements, promises, assurances, warranties, representations and understandings between us, whether written or oral, relating to its subject matter. You agree that you shall have no remedies in respect of any statement, representation, assurance or warranty (whether made innocently or negligently) that is not set out in this License. You agree that you shall have no claim for innocent or negligent misrepresentation or negligent misstatement based on any statement in this in this License.</p><p dir=\"LTR\"> 11.6 PumaPay shall not be liable for any failure to perform its obligations hereunder where such failure results from any cause beyond our reasonable control, including, without limitation, mechanical, electronic or communications failure or degradation.</p><p dir=\"LTR\"> 11.7 PumaPay shall not be liable for any failure to perform its obligations hereunder where such failure results from any cause beyond our reasonable control, including, without limitation, mechanical, electronic or communications failure or degradation.</p><p dir=\"LTR\"> 11.8 These Terms and any non-contractual obligations arising out of or in connection with these Terms shall be governed by, and construed in accordance with, the laws of Cyprus. You agree to submit to the exclusive jurisdiction of the courts of Cyprus.</p></body></html>"
+        },
+        "privacy": {
+            "title": "Privacy Policy",
+            "content": "<!doctype html><html lang=\"en\"><head> <meta charset=\"utf-8\"> <title></title> <link href=\"https://fonts.googleapis.com/css?family=Heebo:300,400\" rel=\"stylesheet\"> <style>body *{font-family: 'Heebo', sans-serif;color: #353535;}p{font-size: 14px;line-height: 19px;}h1{font-size: 18px;line-height: 21px;color: #666666;}</style></head><body><p align=\"center\"> <strong>PUMAPAY PRIVACY POLICY</strong></p><p> <strong>Last updated</strong> : April 25, 2018</p><p> <strong>OUR COMMITMENT TO YOU </strong></p><p> Thank you for showing interest in our Services. In order for us to provide you with our service we are required to collect and process certain personal data about you and your activity.</p><p> By entrusting us with your information, we would like to assure you of our commitment to keep such information private. We have taken measurable steps to protect the confidentiality, security and integrity of this information. We encourage you to review the following information carefully.</p><p> <strong>GROUNDS FOR DATA COLLECTION</strong></p><p> Processing of your personal information (meaning, any information which maypotentially allow your identification with reasonable means; hereinafter \" <strong>Personal Information</strong>\") is necessary for the performance of our contractual obligations towards you and providing you with our services, to protect our legitimate interests and for compliance with legal and financial regulatory obligations to which we are subject.</p><p> When you use our services, you consent to the collection, storage, use, disclosure and other uses of your Personal Information as described in this Privacy Policy.</p><p> <strong>HOW DO WE RECEIVE INFORMATION ABOUT YOU?</strong></p><p> We receive your Personal Information when you voluntarily provide us your personal details in order to create an account on our site (for example, your name and email address).</p><p> <strong>WHAT TYPE OF INFORMATION WE COLLECT?</strong></p><p> In order to provide you with our services we may collect the following Personal Information:</p><p> We record and collect data from or about your device (for example your computer or your mobile device) when you access our services and visit our site. This includes, but not limited to: Mobile ad IDs, Installation UUID, Android IDs and IP Address. This will facilitate our ability to improve our service and personalize your experience with us. This information cannot be used to identify you.</p><p> If we combine Personal Information with non-Personal Information about you, the combined information will be treated as Personal Information for as long as it remains combined.</p><p> <em><u></u></em></p><p> <strong>TRACKING TECHNOLOGIES</strong> <em></em></p><p> When you visit or access our services we use (and authorize 3<sup>rd</sup>parties to use) pixels, cookies, events and other technologies (\" <strong>Tracking Technologies</strong>\"). Those allow us to automatically collect information about you, your device and your online behavior, in order to enhance your navigation in our services, improve our site’s performance, perform analytics and customize your experience on it. In addition, we may merge information we have with information collected through said tracking technologies with information we may obtain from other sources and, as a result, such information may become Personal Information.</p><p> <strong>HOW DO WE USE THE INFORMATION WE COLLECT?</strong></p><ul> <li> <u>Provision of Services</u> <em> – </em> we will use the Personal Information you provide us for the provision and improvement of our services to you, such as to offer you financial products you might be interested in from our third party vendors. </li><li> <u>Marketing purposes</u> <em> </em> – we may use your Personal Information (such as your email address or phone number). For example, by subscribing to our newsletter you will receive tips and announcements straight to your email account. We may also send you promotional material concerning our services or our partners' services (which we believe may interest you). You may choose not to receive our promotional or marketing emails (all or any part thereof) by clicking on the “unsubscribe” link in the emails that you receive from us. Please note that even if you unsubscribe from our marketing materials, we may continue to send you service-related updates and notifications, or reply to your queries and feedback you provide us. </li><li> <u>Analytics, surveys and research</u> - we are always trying to improve our services and think of new and exciting features for our users. From time to time, we may conduct surveys or test features, and analyze the information we have to develop, evaluate and improve these features. </li><li> <u>Protecting our interests</u> <em> - </em> we use your Personal Information when we believe it’s necessary in order to take precautions against liabilities, investigate and defend ourselves against any third party claims or allegations, investigate and protect ourselves from fraud, protect the security or integrity of our services and protect our rights and property, including our users and/or partners. </li><li> <u>Enforcing of policies </u> - we use your Personal Information in order to enforce our policies, including but limited to our Terms and Conditions a. </li><li> <u>Compliance with legal and regulatory requirements</u> - we also use your Personal Information to investigate violations and prevent money laundering and perform due-diligence checks, and as required by law, regulation or other governmental authority, or to comply with a subpoena or similar legal process. </li></ul><p> <strong>WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</strong></p><ul> <li> <u>Companies in our group </u> - we share your information with companies in our group, as well as our employees, in order to provide you with our services. </li><li> <u>Service providers </u> - we share your information with business partners, such as storage providers and analytics providers who help us provide you with our service. </li><li> <u>Legal and regulatory entities</u> - we may disclose any information in case we believe, in good faith, that such disclosure is necessary in order to enforce our Terms and Conditions, take precautions against liabilities, investigate and defend ourselves against any third party claims or allegations, protect the security or integrity of the site and our servers and protect our rights and property, including our its users and/or partners. </li><li> <u>Merger and acquisitions</u> – we may share your information if we enter into a business transaction such as a merger, acquisition, reorganization, bankruptcy, or sale of some or all of our assets. Any party that acquires our assets as part of such a transaction may continue to use your information in accordance with the terms of this Privacy Policy. </li></ul><p> <strong></strong></p><p> <strong>TRANSFER OF </strong> <strong>PERSONAL INFORMATION</strong> <strong> OUTSIDE THE EEA </strong></p><p> Please note that some data recipients may be located outside the EEA. In such cases we will transfer your data only to such countries as approved by the European Commission as providing adequate level of data protection, orenter into legal agreements ensuring an adequate level of data protection. <strong></strong></p><p> <strong></strong></p><p> <strong>HOW WE PROTECT YOUR </strong> <strong>PERSONAL INFORMATION</strong></p><p> We have implemented administrative, technical, and physical safeguards to help prevent unauthorized access, use, or disclosure of your personal information. Your information is stored on secure servers and isn’t publicly available. We limit access of your information only to those employees or partners that need to know the information in order to enable the carrying out of the agreement between us.</p><p> You need to help us prevent unauthorized access to your account by protecting your password appropriately and limiting access to your account (for example, by signing off after you have finished accessing your account). You will be solely responsible for keeping your password confidential and for all use of your password and your account, including any unauthorized use.</p><p> While we seek to protect your information to ensure that it is kept confidential, we cannot absolutely guarantee its security. You should be aware that there is always some risk involved in transmitting information over the internet. While we strive to protect your Personal Information, we cannot ensure or warrant the security and privacy of your personal Information or other content you transmit using the service, and you do so at your own risk.</p><p> Please note that we cannot control, nor will we be responsible for the Personal Information collected and processed by third parties, its safekeeping or a breach thereof, or any other act or omission pertaining to it, their compliance with the General Data Protection Regulation or any other law or regulation. We advise you to read the respective privacy policy of any such third party and use your best discretion.</p><p> <strong></strong></p><p> <strong>RETENTION</strong></p><p> We will retain your Personal Information for as long as necessary to provide our services, and as necessary to comply with our legal obligations, resolve disputes, and enforce our policies. Retention periods will be determined taking into account the type of information that is collected and the purpose for which it is collected, bearing in mind the requirements applicable to the situation and the need to destroy outdated, unused information at the earliest reasonable time. Under applicable regulations, we will keep records containing client personal data, trading information, account opening documents, communications and anything else as required by applicable laws and regulations.</p><p> <strong>YOUR RIGHTS</strong></p><p> If you reside in the EU, you may request to:</p><p> a. Receive confirmation as to whether or not personal information concerning you is being processed, and access your stored personal information, together with supplementary information.</p><p> b. Receive a copy of personal information you directly volunteer to us in a structured, commonly used and machine-readable format.</p><p> c. Request rectification of your personal information that is in our control.</p><p> d. Request erasure of your personal information.</p><p> e. Object to the processing of personal information by us.</p><p> f. Request to restrict processing of your personal information by us.</p><p> g. Lodge a complaint with a supervisory authority.</p><p> However, please note that these rights are not absolute, and may be subject to our own legitimate interests and regulatory requirements.</p><p> <strong>UPDATES TO THIS POLICY </strong></p><p> This Privacy Policy is subject to changes from time to time, in our sole discretion. The most current version will always be posted on our website (as reflected in the \"Last Updated\" heading). You are advised to check for updates regularly. In the event of material changes, we will provide you with a notice. By continuing to access or use our services after any revisions become effective, you agree to be bound by the updated Privacy Policy.</p><p> <strong>HOW TO CONTACT US?</strong></p><p> If you wish to exercise any of the aforementioned rights, or receive more information, please contact using the details provided below:</p><p> <a href=\"mailto:info@pumapay.io\">info@pumapay.io</a></p><p> Decentralized Vision Limited <br/> <br/></p></body></html>"
+        }
+    },
+    "strings": {
+        "symbols": {
+            "usd": "USD",
+            "eur": "EUR",
+            "gbp": "GBP",
+            "jpy": "JPY"
+        },
+        "crypto": {
+            "pma": "PMA",
+            "eth": "ETH"
+        },
+        "langs": {
+            "en": "English",
+            "ja": "Japanese"
+        },
+        "networks": {
+            "3": "Testnet",
+            "1": "Mainnet"
+        }
+    },
+    "errors": {
+        "wrongPassword" : "* Wrong password",
+        "shortPassword" : "* Password must to be at least 8 characters",
+        "passwordNotMatch" : "* Password don't match",
+        "invalidSeed" : "* Seed phrase is invalid",
+        "emptySeed": "* Seed phrase is empty"
+    }
+   
+}

@@ -1,0 +1,30 @@
+<ActionBar class="action-bar">
+    <GridLayout width="100%" horizontalAlignment="left" columns="auto, *" rows="auto">
+        <Image src="res://back" class="action-image"  (tap)="goBack()"></Image>
+        <Label col="1" class="action-bar-title text-center" text="{{'restore.title' | translate}}"></Label>
+    </GridLayout>
+</ActionBar>
+
+<StackLayout class="page">
+        <DockLayout height="100%" stretchLastChild="true">
+            <StackLayout dock="bottom">
+                <Button *ngIf="step == 1" text="{{'restore.access' | translate}}" class="submit-button m-b-30" (tap)="submit()"></Button>
+                <Button *ngIf="step == 0" text="{{'restore.continue' | translate}}" class="submit-button m-b-30" (tap)="continue()"></Button>
+            </StackLayout>
+            <GridLayout columns="*" rows="auto, auto, *" dock="top" *ngIf="step == 0">
+                <Label class="h3 text-center p-b-10 p-t-20" text="{{'restore.desc' | translate}}"  textWrap="true" (tap)="blur($event)"></Label>
+                <TextView row="1" #mmnemonic class="mnemonic" [class.error]="!validMnemonic || emptyMnemonic"  hint="{{'restore.seedhint' | translate}}"  [(ngModel)]="mnemonic" (textChange)="onTextChange($event)" ></TextView>
+                <StackLayout row="2"  (tap)="blur($event)">
+                    <Label text="{{'errors.invalidSeed' | translate}}" class="error" textWrap="true" *ngIf="!validMnemonic"></Label>
+                    <Label text="{{'errors.emptySeed' | translate}}" class="error" textWrap="true" *ngIf="emptyMnemonic"></Label>
+                </StackLayout>
+            </GridLayout>
+            <StackLayout dock="top" *ngIf="step == 1">
+                    <Label class="body text-center p-t-20 p-b-20" text="{{'restore.passdesc' | translate}}"  textWrap="true"></Label>
+                    <TextField  hint="{{'restore.passhint' | translate}}" secure="true" [(ngModel)]="password" (textChange)="onTextChange($event)"></TextField>
+                    <TextField  hint="{{'restore.confirmhint' | translate}}" secure="true" [(ngModel)]="confirmPassword" (textChange)="onTextChange($event)"></TextField>
+                    <Label text="{{'errors.shortPassword' | translate}}" class="error" textWrap="true" *ngIf="!validPass"></Label>
+                    <Label text="{{'errors.passwordNotMatch' | translate}}" class="error" textWrap="true" *ngIf="!validpassMatch"></Label>
+                </StackLayout>
+        </DockLayout>
+</StackLayout>

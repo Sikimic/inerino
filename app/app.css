@@ -1,0 +1,49 @@
+/*
+In NativeScript, the app.css file is where you place CSS rules that
+you would like to apply to your entire application. Check out
+http://docs.nativescript.org/ui/styling for a full list of the CSS
+selectors and properties you can use to style UI components.
+
+/*
+In many cases you may want to use the NativeScript core theme instead
+of writing your own CSS rules. For a full list of class names in the theme
+refer to http://docs.nativescript.org/ui/theme.
+*/
+@import '~nativescript-theme-core/css/core.light.css';
+@import url('./platform.css');
+
+
+Page {
+    background-color: #1e69f5;
+    font-size: 16;
+    font-family: 'Heebo';
+    color: #353535;
+    font-weight: 300;
+}
+
+.action-bar-title {
+    color: #000000;
+    font-size: 17;
+    font-family: 'Heebo';
+    font-weight: 400;
+}
+
+.h1,.h2,.h3,.h4,.h5,.h6 {
+    font-family: 'Heebo';
+    font-weight: 400;
+}
+Button {
+    text-transform: none;
+    border-radius: 4;
+    font-size: 16;
+    margin: 4 0;
+}
+Button.link {
+    background-color: #fff;
+    border-color: #1e69f5;
+    color: #1e69f5;
+    border-width: 2;
+}
+.h2 {
+    font-size: 24;
+  }

@@ -1,0 +1,16 @@
+.page {
+    padding-left: 18;
+    padding-right: 18;
+    
+  }
+
+  .h3 {
+      font-size: 18;
+      color: #666666;
+  }
+
+  .submit-button {
+    background-color: #1e69f5;
+    color: white;
+    margin: 0 18 30 18; 
+}

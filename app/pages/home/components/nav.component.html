@@ -1,0 +1,15 @@
+<GridLayout dock="bottom" columns="*, *" rows="auto" class="bottom">
+
+    <StackLayout col="0" class="icon-button" [nsRouterLink]="['/home/account']"  pageTransition="none" [class.active]="activePage == 'account'">
+        <Label text="&#xf007;" class="icon"></Label>
+        <Label text="{{'nav.account' | translate}}"></Label>
+    </StackLayout>
+    <StackLayout col="1" class="icon-button"   [nsRouterLink]="['/home/past-transactions']"   pageTransition="none" [class.active]="activePage == 'transactions'">
+        <Label text="&#xf362;" class="icon"></Label>
+        <Label text="{{'nav.transactions' | translate}}"></Label>
+    </StackLayout>
+    <!-- <StackLayout col="3" class="icon-button" [nsRouterLink]="['/home/partners']" pageTransition="fade" [class.active]="activePage == 'partners'">
+            <Label text="&#xf2b5;" class="icon"></Label>
+            <Label text="{{'nav.partners' | translate}}"></Label>
+    </StackLayout> -->
+</GridLayout>

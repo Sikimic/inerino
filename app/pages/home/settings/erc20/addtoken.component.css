@@ -1,0 +1,80 @@
+.page {
+    padding-left: 18;
+    padding-right: 18;
+  }
+
+
+  .h2 {
+    font-size: 18;
+    color: #666666;
+    padding: 20 0;
+}
+
+.submit-button {
+    background-color: #1e69f5;
+    color: white;
+    margin-top: 20;
+  }
+
+  .submit-button.disabaled {
+      background-color: #D6D6D6;
+  }
+
+  .link {
+    margin-top: 20;
+    color: #1e69f5;
+  }
+
+  .icon {
+    font-family: "Font Awesome 5 Free" ,"fa-solid-900","fa-regular-400","fa-brands-400";
+    font-weight: 900;
+    font-size: 18;
+    color: #C7C7CC;
+}
+
+
+.address .error {
+    border-bottom-width: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    font-size: 12;
+    color: #E01A0D;
+  }
+  .address TextField {
+    border-bottom-width: 2;
+    border-bottom-color: #8A8A8A;
+    font-size: 12;
+    text-align: left;
+   
+    padding: 6 0;
+}
+
+.address.haserror TextField, .address.haserror .icon {
+    border-bottom-color: #E01A0D;
+}
+
+TextField{
+    border-bottom-width: 2;
+    border-bottom-color: #8A8A8A;
+    font-size: 12;
+}
+
+.address .icon {
+  font-size: 24;
+  border-bottom-width: 2;
+  border-bottom-color: rgba(53, 53, 53, 0.5);
+  padding: 9;
+  background-color: #EDECEC;
+}
+ 
+
+.action-image {
+    width: 22;
+    height: 22;
+    vertical-align: center;
+}
+
+
+.action-bar-title {
+    margin-right: 30;
+}

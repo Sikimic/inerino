@@ -1,0 +1,33 @@
+
+
+.noty {
+    height: 30;
+}
+
+/deep/ .ios320 .h3 {
+    font-size: 16;
+}
+
+/deep/ .ios320 .icon {
+    font-size: 16;
+}
+
+/deep/ .ios320 .copy {
+    padding: 13;
+}
+
+/deep/ .ios320 .hr {
+    height: 8;
+}
+
+/deep/ .ios320 .address-copy, /deep/ .ios320 .avatar{
+    margin-bottom: 14;
+}
+
+/deep/ .ios320 .submit-button {
+    margin-bottom: 8;
+}
+
+/deep/ .ios320 .popup .popup-cnt {
+    margin-top: 10;
+}

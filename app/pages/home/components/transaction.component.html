@@ -1,0 +1,35 @@
+
+<StackLayout [class.active]="!selectionVisible || selected" [class.noselect]="!selectionVisible">
+    <GridLayout columns="20, auto, *, auto" rows="auto, auto" class="tran" >
+        <Label col="0"  colSpan="2"  [text]="date | date:'MMMM d y hh:mm'"  textWrap="true"></Label>
+        <Label col="2" colSpan="2" class="price" >
+                <FormattedString>
+                        <Span [text]="(price | number:'1.0-2')" color="#1e69f5"></Span>
+                        <Span [text]="' ' + transaction.token.toUpperCase()"></Span>
+                </FormattedString>
+        </Label>
+        <Label row="1" col="0" class="icon" [class.income]='isIncome' [class.outcome]='!isIncome' [text]="isIncome? '&#xf358;' : '&#xf35b;' " textWrap="true"></Label>
+        <Label row="1" col="1" [class]="'status ' + statusCls" [text]="status | async" textWrap="true"></Label>
+        <Label row="1" col="2" class="rate" *ngIf="transaction.token == 'eth' || transaction.token == 'pma'" [text]="((price*(ethRate/(  transaction.token == 'eth'? 1 : pmaRate))) | number:'1.0-2') + ' ' + currencySymbol" textWrap="true"></Label>
+        <Label row="1" col="3" class="icon"  visibility="{{ selectionVisible? 'visible' : 'collapsed'}}" [text]="selected? '&#xf106;' : '&#xf107;'" textWrap="true"></Label>
+    </GridLayout>
+    <StackLayout class="subview">
+        <StackLayout  orientation="horizontal">
+            <Label class="bold" text="{{(isIncome? 'transaction.from' : 'transaction.sentto') | translate}}" textWrap="true"></Label>
+            <Label [text]="tran?.name" textWrap="true" visibility="{{(tran?.name && tran?.name.length > 0) ? 'visible' : 'collapsed'}}"></Label>
+            <Label text="("></Label>
+            <Label [text]="tran?.to"></Label>
+            <Label text=")"></Label>
+        </StackLayout>
+        <StackLayout  orientation="horizontal">
+            <Label class="bold" text="{{'transaction.gasfee' | translate}}" textWrap="true"></Label>
+            <Label [text]="(gasfee | number:'1.0-5') + ('transaction.eth' | translate)" textWrap="true"></Label>
+        </StackLayout>
+        <StackLayout  orientation="horizontal">
+            <Label class="bold" text="{{'transaction.description' | translate}}" textWrap="true" visibility="{{(tran?.description && tran?.description.length > 0) ? 'visible' : 'collapsed'}}"></Label>
+            <Label [text]="tran?.description" textWrap="true" visibility="{{(tran?.description && tran?.description.length > 0) ? 'visible' : 'collapsed'}}"></Label>
+        </StackLayout>
+        <Label class="lnk text-center" text="{{'transaction.etherscanlink' | translate}}" textWrap="true" (tap)="goToEtherScan()" ></Label>
+    </StackLayout>
+    <StackLayout class="hr" visibility="{{ selectionVisible? 'visible' : 'collapsed'}}" ></StackLayout>
+</StackLayout>

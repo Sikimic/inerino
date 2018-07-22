@@ -1,0 +1,96 @@
+.tran {
+    font-size: 16;
+    padding: 10 18;
+}
+.tran .price, .tran .rate {
+    text-align: right;
+}
+
+.icon{
+    font-family: "Font Awesome 5 Free" ,"fa-solid-900","fa-regular-400","fa-brands-400";
+    font-weight: 900;
+    font-size: 18;
+    color: #929292;
+    padding-top: 5;
+    padding-left: 5;
+}
+
+.icon.income {
+    /* transform: rotate(90deg); */
+    font-size: 12;
+    padding: 7 5 0 0;
+    /* padding:0;
+    margin: 0;
+    border-color: red;
+    border-width: 1; */
+}
+
+.icon.outcome {
+    /* transform: rotate(90deg); */
+    font-size: 12;
+    padding: 7 5 0 0;
+    /* padding:0;
+    margin: 0;
+    border-color: red;
+    border-width: 1; */
+}
+
+.rate {
+    font-size:12;
+    padding-right: 5;
+    padding-top: 5;
+}
+.status{
+    font-size:12;
+    font-family: 'Heebo';
+    font-weight: 400;
+    color: #1E69F5;
+    padding-top: 5;
+}
+
+.status.completed {
+    color: #2CC93C;
+}
+.status.failed {
+    color: #E01A0D;
+}
+
+.subview{
+    height: 0;
+    background-color: #F5F5F5;
+    font-size: 12;
+    color: #828282;
+    font-family: 'Heebo';
+    font-weight: 400;
+    padding: 12 18;
+}
+
+.noselect .subview {
+    background-color: #ffffff;
+}
+
+.subview StackLayout {
+    margin-bottom: 10;
+}
+
+.lnk {
+    color: #1E69F5;
+    font-size: 16;
+    text-decoration: underline;
+}
+
+.bold {
+    font-family: 'Heebo';
+    font-weight: 500;
+}
+
+.active .subview{
+    height: auto;
+    
+}
+
+.hr {
+    height: 1;
+    background-color:#F5F5F5;
+    width:100%
+}

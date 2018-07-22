@@ -1,0 +1,72 @@
+
+.page {
+    padding-left: 18;
+    padding-right: 18;
+  }
+  .hr {
+    height: 16;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAgCAIAAABch4VNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGNkREOENDOTU5QkUxMUU4OTJEQThCRkI1REY4ODE3OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGNkREOENDQTU5QkUxMUU4OTJEQThCRkI1REY4ODE3OCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkY2REQ4Q0M3NTlCRTExRTg5MkRBOEJGQjVERjg4MTc4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkY2REQ4Q0M4NTlCRTExRTg5MkRBOEJGQjVERjg4MTc4Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+fdEinAAAAERJREFUeNp0jcsJACAMQ4N0/xU7QKGUfu5aQfCghwdJCAmYeRBRAxGBqsLM4O6ICGTmpqo2L/3rnPz2vdnb/bG+pgADAAqyVVjCIEJgAAAAAElFTkSuQmCC;');
+    background-repeat: repeat-x;
+    background-position: top;
+    width:100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.h3 {
+    font-size: 18;
+    color: #666666;
+    padding: 20 0;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.picker{
+    background-color: #fff;
+}
+
+ListPicker {
+    width: 50%;
+    color: #828282;
+}
+
+.done {
+    background-color: rgba(248, 248, 248, 0.8);
+    color: #1e69f5;
+    padding: 15;
+    text-align: right;
+}
+
+.icon{
+    font-family: "Font Awesome 5 Free" ,"fa-solid-900","fa-regular-400","fa-brands-400";
+    font-weight: 900;
+    font-size: 20;
+    color: #C7C7CC;
+}
+
+.dd , .lnk{
+    font-size: 16;
+    color: #828282;
+}
+
+.dd Label, .lnk Label {
+    padding-bottom: 20;
+}
+.dd .value {
+    color: #1e69f5;
+    text-align: right;
+}
+
+.action-image {
+    width: 22;
+    height: 22;
+    vertical-align: center;
+}
+
+
+.action-bar-title {
+    margin-right: 30;
+}

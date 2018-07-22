@@ -1,0 +1,43 @@
+.gas{
+    font-size: 16;
+  }
+  
+  .gas .gas-price {
+    font-size: 16;
+    color: #1e69f5;
+    text-align: right;
+    margin: 0;
+    padding: 10 0;
+    margin-left: 80;
+    border-bottom-width: 2;
+    border-bottom-color: #1E69F5;
+  }
+  
+  .explain {
+    font-size: 12;
+  }
+
+  
+.blue {
+    color: #1e69f5;
+  }
+
+  .icon-s{
+    font-family: "Font Awesome 5 Free" ,"fa-solid-900","fa-regular-400","fa-brands-400";
+    font-weight: 900;
+    font-size: 16;
+    color: #929292;
+  }
+  .icon-s.blue {
+    color: #1e69f5;
+  }
+  .h3 {
+    font-size: 18;
+    color: #666666;
+}
+
+
+.balance{
+  color: #909090;
+  font-size: 12;
+}

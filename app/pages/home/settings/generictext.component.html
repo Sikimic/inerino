@@ -1,0 +1,8 @@
+<ActionBar class="action-bar">
+        <GridLayout width="100%" horizontalAlignment="left" columns="auto, *" rows="auto">
+            <Image src="res://back" class="action-image"  (tap)="goBack()"></Image>
+            <Label col="1" class="action-bar-title text-center" text="{{title}}"></Label>
+        </GridLayout>
+    </ActionBar>
+
+<WebView [src]="content" ></WebView>

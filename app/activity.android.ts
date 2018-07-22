@@ -1,0 +1,70 @@
+import { ReplaySubject } from 'rxjs/ReplaySubject';
+import { setActivityCallbacks, AndroidActivityCallbacks } from 'ui/frame';
+
+export const androidOnRouteToURL = new ReplaySubject<string>();
+
+@JavaProxy('com.pumapay.MainActivity')
+export class Activity extends android.app.Activity {
+
+    private _callbacks: AndroidActivityCallbacks;
+
+    protected onCreate(savedInstanceState: android.os.Bundle): void {
+        if (!this._callbacks) {
+            setActivityCallbacks(this);
+        }
+        this._callbacks.onCreate(this, savedInstanceState, super.onCreate);
+        console.log('MainActivity.onCreate');
+
+        const creationIntent = this.getIntent();
+        this.handleIntent(creationIntent);
+    }
+
+    protected onSaveInstanceState(outState: android.os.Bundle): void {
+        this._callbacks.onSaveInstanceState(this, outState, super.onSaveInstanceState);
+    }
+
+    protected onStart(): void {
+        this._callbacks.onStart(this, super.onStart);
+        console.log(`MainActivity.onStart`);
+    }
+
+    protected onStop(): void {
+        this._callbacks.onStop(this, super.onStop);
+        console.log(`MainActivity.onStop`);
+    }
+
+    protected onDestroy(): void {
+        this._callbacks.onDestroy(this, super.onDestroy);
+        console.log(`MainActivity.onDestroy`);
+    }
+
+    public onBackPressed(): void {
+        this._callbacks.onBackPressed(this, super.onBackPressed);
+        console.log(`MainActivity.onBackPressed`);
+    }
+
+    public onRequestPermissionsResult(requestCode: number, permissions: Array<String>, grantResults: Array<number>): void {
+        console.log(`MainActivity.onRequestPermissionsResult ${requestCode}`);
+        this._callbacks.onRequestPermissionsResult(this, requestCode, permissions, grantResults, undefined /*TODO: Enable if needed*/);
+    }
+
+    protected onActivityResult(requestCode: number, resultCode: number, data: android.content.Intent): void {
+        console.log(`MainActivity.onActivityResult`);
+        this._callbacks.onActivityResult(this, requestCode, resultCode, data, super.onActivityResult);
+    }
+
+    protected onNewIntent(intent: android.content.Intent): void {
+        super.onNewIntent(intent);
+        console.log('MainActivity.onNewIntent');
+        this.handleIntent(intent);
+    }
+
+    private handleIntent(intent: android.content.Intent) {
+        const action = intent.getAction();
+        const dataStr = intent.getDataString();
+        console.log(`MainActivity.handleIntent: [${action}] ${dataStr}`);
+        if (action === android.content.Intent.ACTION_VIEW && dataStr !== null) {
+            androidOnRouteToURL.next(dataStr);
+        }
+    }
+}

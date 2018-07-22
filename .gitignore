@@ -1,0 +1,63 @@
+# compiled output
+/dist
+/tmp
+/out-tsc
+/platforms
+
+# dependencies
+/node_modules
+
+/package-lock.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.cloud/*
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+.cloud
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+/docs
+
+
+# System Files
+.DS_Store
+Thumbs.db
+
+*.js.map
+app/**/*.js
+app/*.js
+e2e/**/*.js
+e2e/reports/
+hooks/*
+!hooks/before-prepare
+hooks/before-prepare/*
+!hooks/before-prepare/patch-npm-tweaks.js
+
+lib/
+node_modules/
+platforms/
+tmp/
+typings/
+report/
+test-results.xml
+

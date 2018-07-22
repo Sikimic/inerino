@@ -1,0 +1,17 @@
+
+Button {
+  padding: 7 0;
+}
+
+Button.submit-button {
+  border-width: 1;
+  border-color: #1e69f5;
+}
+
+TextField {
+  placeholder-color: #8A8A8A;
+}
+
+Page.ios {
+  font-weight: 400;
+}

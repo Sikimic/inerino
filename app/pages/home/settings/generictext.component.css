@@ -1,0 +1,13 @@
+Page {
+    background-color: #ffffff;
+  }
+  .action-image {
+    width: 22;
+    height: 22;
+    vertical-align: center;
+}
+
+
+.action-bar-title {
+    margin-right: 30;
+}

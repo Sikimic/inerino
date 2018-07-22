@@ -1,0 +1,31 @@
+.noty {
+    height: 30;
+}
+
+/deep/ .android320 .h3 {
+    font-size: 16;
+}
+
+/deep/ .android320 .icon {
+    font-size: 16;
+}
+
+/deep/ .android320 .copy {
+    padding: 13;
+}
+
+/deep/ .android320 .hr {
+    height: 8;
+}
+
+/deep/ .android320 .address-copy, /deep/ .android320 .avatar{
+    margin-bottom: 14;
+}
+
+/deep/ .android320 .submit-button {
+    margin-bottom: 8;
+}
+
+ .android320 :host .popup .popup-cnt {
+    margin-top: 10;
+}

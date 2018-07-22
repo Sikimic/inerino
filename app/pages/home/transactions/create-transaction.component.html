@@ -1,0 +1,62 @@
+<ActionBar class="action-bar">
+    <GridLayout width="90%" horizontalAlignment="left" columns="auto, *" rows="auto">
+        <Image src="res://pumap" class="action-image"></Image>
+        <Label col="1" class="action-bar-title text-center" text="{{'createtransaction.title' | translate}}"></Label>
+    </GridLayout>
+</ActionBar>
+<AbsoluteLayout>
+    <DockLayout #root stretchLastChild="true" height="100%" width="100%" *ngIf="renderView">
+        <GridLayout columns="*, *" rows="auto" class="m-x-20 m-b-20" dock="bottom">
+            <Button col="0" text="{{'createtransaction.cancel' | translate}}" class="link m-r-10" (tap)="onCancel()"></Button>
+            <Button col="1" text="{{'createtransaction.submit' | translate}}" class="submit-button m-l-10" (tap)="onSubmit()"></Button>
+        </GridLayout>
+        <ScrollView dock="top">
+            <StackLayout>
+                <StackLayout class="page">
+                    <Label class="h3 m-t-25" [text]="('createtransaction.sendto' | translate)" textWrap="true"></Label>
+                    <GridLayout columns="auto, *" rows="auto, auto" class="tran-data m-t-10">
+                        <Image col="0" [src]="avatar" stretch="none" horizontalAlignment="center" verticalAlignment="center" class="img-circle avatar"></Image>
+                        <GridLayout col="1" columns="*, auto" rows="auto, auto" class="address">
+                            <TextField col="0" hint="{{'createtransaction.hint' | translate}}" [text]="toAddress" (textChange)="onAddressChange($event)"
+                                secure="false" returnKeyType="done" autocorrect="false"></TextField>
+                            <Label col="1" class="icon" text="&#xf029;" textWrap="true" (tap)="scan()"></Label>
+                            <Label col="0" row="1" *ngIf="showInvalidAddress" class="error" [text]="('createtransaction.errors.badaddress' | translate)"
+                                textWrap="true"></Label>
+                        </GridLayout>
+                    </GridLayout>
+                </StackLayout>
+                <StackLayout class="hr"></StackLayout>
+                <StackLayout class="page">
+                    <Label class="h3 m-t-25" [text]="('createtransaction.amount' | translate)" textWrap="true"></Label>
+                    <GridLayout columns="auto, auto, auto, *" rows="auto, auto, auto" class="m-t-10 m-b-25 amount">
+                        <TextField col="0" minvalue="0" width="40%" class="text-left" [(ngModel)]="amount" secure="false" returnKeyType="done" keyboardType="number"
+                            (textChange)="onAmountChange($event)" autocorrect="false"></TextField>
+                        <Label col="1" [text]="token?.symbol" textWrap="true" class="currency-select" (tap)="startpick()"></Label>
+                        <Label col="2" class="icon currency-select" text="&#xf0d7;" textWrap="true" (tap)="startpick()"></Label>
+                        <Label col="3" class="text-right" [text]="'=' + (amountValue | number:'1.0-2') + ' ' + currencySymbol"></Label>
+
+                        <Label col="0" row="1" colSpan="4" class="current-balance" [text]="('createtransaction.currentbalance.'+ (token?.symbol == 'ETH'? 'eth' : 'pma') | translate) + (cryptoBalance | number:'1.0-5') + ' ' + token?.symbol"
+                            textWrap="true"></Label>
+                        <Label col="0" row="2" colSpan="4" *ngIf="showInvalidAmmount" class="error" [text]="('createtransaction.errors.badamount' | translate)"
+                            textWrap="true"></Label>
+                    </GridLayout>
+                </StackLayout>
+                <StackLayout class="hr"></StackLayout>
+                <StackLayout class="page">
+                    <Gas [transactionPrice]="transactionPrice" [gas]="gas" [ethRate]="ethBalance.rate" [gasPrice]="gasPrice" [balance]="ethBalance.balance"
+                        [currencySymbol]="currencySymbol" (change)="onGasChanged($event)"></Gas>
+                    <Label *ngIf="showIvalidGas" class="error" [text]="('createtransaction.errors.badgas' | translate)" textWrap="true"></Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </DockLayout>
+    <Toast></Toast>
+    <DockLayout height="100%" width="100%" stretchLastChild="true" visibility="{{ pick ? 'visible' : 'collapsed' }}">
+        <GridLayout dock="bottom" class="picker" columns="*" rows="auto,auto" verticalAlignment="bottom">
+            <Label row="0" textWrap="true" text="{{'settings.done' | translate}}" (tap)="donepick()" class="done"></Label>
+            <ListPicker row="1" [items]="items" [selectedIndex]="selected" (selectedIndexChange)="selectedIndexChanged($event)" horizontalAlignment="center"
+                verticalAlignment="bottom"></ListPicker>
+        </GridLayout>
+        <StackLayout dock="top" class="overlay" (tap)="donepick()"></StackLayout>
+    </DockLayout>
+</AbsoluteLayout>

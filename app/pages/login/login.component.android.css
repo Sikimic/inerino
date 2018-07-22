@@ -1,0 +1,34 @@
+TextField {
+  font-size: 14;
+  margin-bottom: 16;
+
+}
+
+.android320 :host .h2 {
+  font-size: 16;
+}
+.android320 :host Image{
+  width: 70;
+}
+
+.android320 :host TextField {
+  font-size: 12;
+}
+
+.android320 :host Button {
+  font-size: 13;
+  padding: 0;
+  height: 40;
+}
+
+.android320 :host .orlbl{
+  font-size: 14; 
+}
+
+.android320 :host .body {
+  font-size: 13;
+}
+
+.android320 :host .btn-cnt {
+  margin-bottom: 10;
+}

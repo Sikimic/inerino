@@ -1,0 +1,54 @@
+
+
+StackLayout {
+    margin-left: 18;
+    margin-right: 18;
+  }
+  Image {
+    margin-top: 63;
+    margin-bottom: 35;
+    width: 121;
+  }
+
+  .submit-button {
+    background-color: #1e69f5;
+    color: white;
+    margin: 16 0 32 0;
+    
+  }
+
+  GridLayout{
+    border-width: 1;
+    border-color: #E5E5E5;
+    border-radius: 4;
+    padding: 13;
+  }
+  Image {
+    width: 121;
+  }
+  .ios320 :host .h2, .android320 :host .h2 {
+    font-size: 16;
+  }
+  .ios320 :host Image, .android320 :host Image{
+    width: 100;
+  }
+  
+  .ios320 :host TextField, .android320 :host TextField{
+    font-size: 12;
+  }
+  
+  .ios320 :host Button, .android320 :host Button {
+    font-size: 13;
+  }
+  
+  .ios320 :host .body,  .android320 :host .body {
+    font-size: 13;
+  }
+
+  .android320 :host .submit-button {
+    margin: 8 0 8 0;
+  } 
+  
+
+
+ 

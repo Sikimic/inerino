@@ -1,0 +1,7 @@
+.action-bar-icon {
+    padding-right: 18;
+}
+
+/deep/ .android320 .action-bar-title {
+    font-size: 14;
+}

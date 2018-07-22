@@ -1,0 +1,92 @@
+<ActionBar class="action-bar">
+    <GridLayout width="90%" horizontalAlignment="left" columns="auto, *" rows="auto">
+        <Image src="res://pumap" class="action-image"></Image>
+        <Label col="1" class="action-bar-title text-center" text="{{'account.title' | translate}}"></Label>
+    </GridLayout>
+    <ActionItem (tap)="gotoSettings()"
+     ios.position="right" 
+    android.position="actionBar">
+    <Label class="icon action-bar-icon p-y-10" text="&#xf013;"></Label>
+</ActionItem>
+</ActionBar>
+
+<AbsoluteLayout>
+    <DockLayout #root height="100%" width="100%"  stretchLastChild="true" *ngIf="renderView">
+            <Nav activePage="account"></Nav>
+            <GridLayout columns="*, *" rows="auto, auto" dock="bottom">
+                <GridLayout col="1"  columns="*" rows="auto, auto" class="submit-button scan-btn" (tap)="scan()" > 
+                    <Label text='&#xf029;'  class="icon" fontSize="36"></Label>
+                    <Label row="1" [text]="('account.scan' | translate)" ></Label>
+                </GridLayout>
+                <GridLayout col="0" columns="*" rows="auto, auto" class="submit-button send-btn" (tap)="send()" > 
+                    <Label text='&#xf0aa;'  class="icon" fontSize="36"></Label>
+                    <Label row="1" [text]="('account.send' | translate)" ></Label>
+                </GridLayout>
+            </GridLayout>
+            
+        <StackLayout dock="top" >
+            
+            <StackLayout class="page">
+                <GridLayout columns="auto, *" rows="auto" class="m-t-25">
+                    <Label class="h3" text="{{'account.ethaddress' | translate}}" textWrap="true"></Label>
+                    <Label col="1" class="icon info text-right" [class.blue]="tip" text="&#xf05a;" (tap)="addressTooltip()"></Label>
+                </GridLayout>
+                <GridLayout class="m-t-10" columns="auto, *" rows="auto, auto">
+                    <Image  [src]="avatar"  horizontalAlignment="center" class="img-circle avatar" [class.nopadding]="tip"></Image>
+                    <GridLayout col="1" columns="*, 44, auto" rows="auto" class="address-copy" [class.nopadding]="tip" >
+                        <Label col="0" class="address" [text]="address" (tap)="copy()"></Label>
+                        <Label col="1" class="icon copy" [class.copied]="copied"  text="&#xf0c5;" textWrap="true" (tap)="copy()"></Label>
+                        <Image col="2" width="44" marginLeft="14"  (tap)="showQR()" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAK1SURBVHgB7Zixb9pQEMYvVWAoDNABd4BKoUPoAHOYGELm0DX925qt+SfqLCxkYSlLs8AACyjFlQod8ODe58aSa1793vOzI1nyJ1lI5Ag/7r53d/bJj6cnj3KkV5QzFcBZqwDOWgVw1iqAs1bugE91gnf7PW3Wa2lcs9Ui8jxarVZKseVSiVSlBbxn4MnDgzRuZFn+q0rsVbVKjUaDVKUFHMhioPbZ2dH732Yz/0eFVa/XqXN+fhQ7XyxorVCtqBIBVyoVarfbJIKIAqPcotj1ZkNJZHTo5vM52bZNy+VSGotsIhafMZERMA4hMnVwXeXYXaQCukpkiUAfOh16z+Uul8vS2HfcDd6y91Vi42QEXGJ/lhRbkk5snBIBw4eqXoQNvtzdUVrSAkY50SFUpROrqpO83YRqZRjd4KfjSONqPCzQfzeCXvuas17lC93iN1/BlMP/VhnRWsAOw6KXyjS6vib3cKCvgthut0s9vhZ8Bg4cA2D4fDwe0/Dy0p+MqQEHgjet530hrBUPEFFPRnfocAvEZ6znjAI8LMDb9/dS6MS7RP/i4uh9G8Mhsh9gj+j1ev+0NIzv8Ah3tltlaKM+jPVxyReGh2jjQumDTOKHzHg52rKt3JjJKIM2Gs34cvTjX7vd0d9gmwB2Mpn4EPCqqzDGA2hHcMCNMozMwh5vYjw3nU79LU5XnifutkbAyGLccEDr+v74SLqC36+GQ6ElEgFjnRQt3yhlWNGSAqTFS1C9Vvs7NfluI4hDJWSwiYHhQxUvhoHRzgaDQewCJIOFtIDxpZ9ubkhXsE2/3/8vLLKtAgsZeVimwN84mHFeh0U+jkZK62emzyVazab/KssapLorZwqMUiO7aSzugTJ/8oPhsTe8jwvrRfZhdJS0svwiz9ZyZYm0VQBnrdPPt7eUJ+Uuw38AwtQck3nvFxMAAAAASUVORK5CYII="></Image>
+                    </GridLayout>
+                    <Label col="1" row="1" [class.tipactive]="tip"  class="tip" text="{{'account.ethtip' | translate}}" textWrap="true"></Label>
+                </GridLayout>
+            </StackLayout>
+            <StackLayout class="hr"></StackLayout>
+            <StackLayout>
+                <GridLayout columns="auto, *" rows="auto" class="m-t-10 m-b-10 m-x-20">
+                    <Label class="h3" text="{{'account.balance' | translate}}" textWrap="true"></Label>
+                    <Label col="1" class="icon text-right" [class.blue]="refreshing" text="&#xf021;" (tap)="refresh()"></Label>
+                </GridLayout>
+                <StackLayout class="bb"></StackLayout>
+                <GridLayout class="page" columns="*" rows="*">
+                    <RadListView  #list [items]="tokens" itemReorder="true" (itemTap)="onItemTap($event)" (itemReordered)="onItemReordered($event)" (itemReorderStarting)="onItemReorderedStarting($event)">
+                        <ng-template tkListItemTemplate let-item="item" let-index="index">
+                            <GridLayout columns="32, *, *, auto" rows="25, 20, 1" [class.rordr]="index == reorderIndex">
+                                <Image col="0" rowSpan="2" verticalAlignment="center" [src]="item.ico" class="token-ico" ></Image>
+                                <Label col="1" verticalAlignment="bottom" [text]="item.symbol"  class="symbol"> </Label>
+                                <Label col="1" row="1" verticalAlignment="top" [text]="item.name"  class="nsymbol"> </Label>
+                                <Label col="2" verticalAlignment="bottom" class="text-right symbol" [text]="item.balance | number:'1.0-2'"></Label>
+                                <Label col="2" row="1" verticalAlignment="top" class="text-right nsymbol" [text]="((item.rate * item.balance) | number:'1.0-2')  + ' ' + currencySymbol"></Label>
+                                <Image col="3" rowSpan="2" class="text-right m-y-10 m-l-10" height="20" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAgCAYAAAAbifjMAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFLSURBVHgB3ZXLcYMwEIYXQQGkgrgE0oHcgdNBUgAk6cCpAAe4xx0kJbiDpARK0J2XV7LErDVIeMYHP/4ZjVb69FhpFwFwpgJjlGX5hhWXdtu2H6iaDnRxtUBRFC9YfZPxddd1TzhIzHEmW8MwJJZnC11gjjNwS4BfYlyg7/uNdIvs+EXvwMfHS8zzPMZKuioQ/tvbzfHLyT7CCg4u/toDXTzQcBGG4R+ase7fZVm2JJOdXEWBMfZOoBSvqurRNHzcmQdN0zyAR4abPLDPXNNQ+bhaABs7zO1ndHUrkwTtJR09x69IMlw63idzkwdxFEU/eD6uOoNgnabpJ5no5OoSMUlWBkqhvaY7+bh5UPiExwmZ4ORMuzT1eY59Pq4WwLzeyPjC4ZWpsbya9/AUfuO6ox/LVEiEwz7qMw/KFvw/Fi8fhfnNsSTg0BTfA4JoHqKl8PfWAAAAAElFTkSuQmCC" ></Image>
+                                <StackLayout col="1" row="2" colSpan="3" class="bb"></StackLayout>
+                            </GridLayout>
+                        </ng-template>
+                    </RadListView>
+                </GridLayout>
+                <!-- <GridLayout columns="auto, *, auto" rows="auto" class="price-line">
+                    <Label col="0" class="symbol" text="{{'strings.crypto.pma' | translate}}"></Label>
+                    <Label col="1" class="amount pma" [text]="tokenBalance | number:'1.0-2'"></Label>
+                    <Label col="2" class="price" [text]="((tokenBalance*(ethRate/pmaRate)) | number:'1.0-2') + ' ' + currencySymbol" textWrap="true"></Label>
+                </GridLayout>
+                <GridLayout columns="auto, *, auto" rows="auto" class="price-line">
+                    <Label col="0" class="symbol" text="{{'strings.crypto.eth' | translate}}"></Label>
+                    <Label col="1" class="amount" [text]="balance | number:'1.0-6'"></Label>
+                    <Label col="2" class="price"  [text]="((balance*ethRate) | number:'1.0-2') + ' ' + currencySymbol" textWrap="true"></Label>
+                </GridLayout> -->
+            </StackLayout>
+            
+        </StackLayout>
+    </DockLayout>
+    <Toast></Toast>
+    <AbsoluteLayout width="100%" height="100%" class="popup" *ngIf="isShowPopup">
+        <GridLayout columns="*" rows="auto"  horizontalAlignment="center" class="popup-cnt">
+            <GridLayout col="0" columns="*,auto" rows="auto, auto, auto, auto"  horizontalAlignment="center">
+                <Label col="0" class="text-left p-t-10 p-l-20"  [text]="('account.popuptitle' | translate)"></Label>
+                <Label col="1" class="icon text-right p-t-10 p-r-10"  text="&#xf00d;" (tap)="closeQR()"></Label>
+                <Image  col="0"  row="1" colSpan="2" [src]="qr" width="80%"  horizontalAlignment="center" class="qr"></Image>
+                <Label col="0" row="2" colSpan="2" class="address" [text]="address" ></Label>
+                <Button  col="0" row="3" colSpan="2" class="submit-button m-x-20" (tap)="shareQr()" text="{{'account.popupcta' | translate}}" ></Button>
+            </GridLayout>
+        </GridLayout>
+    </AbsoluteLayout>
+</AbsoluteLayout>

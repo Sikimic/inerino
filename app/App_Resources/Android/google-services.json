@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "339747669247",
+    "firebase_url": "https://pumapay-wallet.firebaseio.com",
+    "project_id": "pumapay-wallet",
+    "storage_bucket": "pumapay-wallet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339747669247:android:27e0c66f07066a01",
+        "android_client_info": {
+          "package_name": "com.pumapay.pumawallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339747669247-6ss6qr4fkmh36i4n8a5g04p2mqbdara1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWW49pMTCtkxco7vOCrcpg8P1pFspjxOI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

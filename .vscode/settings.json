@@ -1,0 +1,7 @@
+{
+    "nativescript.iosTeamId": "Y6S758R562",
+    "css.validate": false,
+    "files.exclude": {
+        "**/*.js": { "when": "$(basename).ts" }
+    },
+}

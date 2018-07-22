@@ -1,0 +1,23 @@
+<ActionBar class="action-bar">
+        <GridLayout width="100%" horizontalAlignment="left" columns="auto, *" rows="auto">
+            <Image src="res://back" class="action-image"  (tap)="goBack()"></Image>
+            <Label col="1" class="action-bar-title text-center" text="{{'about.title' | translate}}"></Label>
+        </GridLayout>
+    </ActionBar>
+
+<DockLayout stretchLastChild="true">
+    <StackLayout dock="bottom" class="m-b-5">
+        <Label class="text-center p-b-20" text="{{('about.versionp' | translate:version) }}" textWrap="true"></Label>
+        <StackLayout orientation="horizontal" class="p-b-20" horizontalAlignment="center">
+            <Label class="text-right" text="{{'about.devby' | translate}}" textWrap="true"></Label>
+            <Label class="text-left lnk" text="{{'about.devbylink' | translate}}" textWrap="true" (tap)="goto('https://decentralized.vision')"></Label>
+        </StackLayout>
+        <!-- <StackLayout orientation="horizontal" class="p-b-20"  horizontalAlignment="center">
+            <Label class="text-right" text="{{'about.pma' | translate}}" textWrap="true"></Label>
+            <Label class="text-left lnk" text="{{'about.pmalink' | translate}}" textWrap="true" (tap)="goto('https://pumapay.io')"></Label>
+        </StackLayout> -->
+    </StackLayout>
+    <GridLayout dock="top" col="*" rows="*">
+            <Image src="res://logo_login" width="121"  stretch="aspectFit" horizontalAlignment="center" verticalAlignment="center"></Image>
+    </GridLayout>
+</DockLayout>

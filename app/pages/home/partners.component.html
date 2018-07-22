@@ -1,0 +1,15 @@
+<ActionBar class="action-bar">
+    <NavigationButton  icon="res://pumap" class="p-10"
+        (tap)="dummy()"></NavigationButton>
+    <Label class="action-bar-title" text="{{'partners.title' | translate}}"></Label>
+</ActionBar>
+
+<DockLayout  height="100%" width="100%"  stretchLastChild="true">
+        <Nav activePage="partners"></Nav>
+    <StackLayout dock="top" class="page">
+        <Label class="h3 p-y-30 text-center" text="{{'partners.subtitle' | translate}}"></Label>
+        <Image src="res://logo_login" width="121"  stretch="aspectFit" horizontalAlignment="center"></Image>
+
+        <Button text="{{'partners.check' | translate}}" width="80%" class="submit-button m-t-30" horizontalAlignment="center" (tap)="gotoPartners()" ></Button>
+    </StackLayout>
+</DockLayout>

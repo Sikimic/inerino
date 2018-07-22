@@ -1,0 +1,14 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="{{'terms.actionbar' | translate}}"></Label>
+</ActionBar>
+<StackLayout>
+    <Image src="res://logo_login" stretch="aspectFit" horizontalAlignment="center"></Image>
+    <Label class="body text-center m-b-10" text="{{'terms.desc' | translate}}"  textWrap="true"></Label>
+    <Label class="h2 text-center m-x-10" text="{{'terms.title' | translate}}"></Label>
+    <DockLayout stretchLastChild="true">
+        <Button dock="bottom" class="submit-button" text="{{'terms.accept' | translate}}" (tap)="onAcceptTerms()" ></Button>
+        <GridLayout columns="*" rows="*">
+            <WebView #terms [src]="('generictext.terms.content' | translate)" dock="top"></WebView>
+        </GridLayout>
+    </DockLayout>
+</StackLayout>

@@ -1,0 +1,84 @@
+<ActionBar class="action-bar">
+    <GridLayout  width="90%" horizontalAlignment="left" columns="auto, *" rows="auto">
+        <Image src="res://pumap" class="action-image"></Image>
+        <Label col="1" class="action-bar-title text-center" text="{{'pasttransactions.title' | translate}}"></Label>
+    </GridLayout>
+    <ActionItem (tap)="gotoFilter()"
+    ios.position="right"
+   android.position="actionBar">
+   <Label class="icon action-bar-icon p-y-10" [class.blue]="isFiltered" text="&#xf0b0;"></Label>
+   </ActionItem>
+</ActionBar>
+<AbsoluteLayout>
+    <DockLayout stretchLastChild="true"  height="100%" width="100%">
+        <Nav activePage="transactions"></Nav>
+        <ActivityIndicator dock="top" *ngIf="!renderView" [busy]="!renderView" width="100" height="100" class="activity-indicator" horizontalAlignment="center" verticalAlignment="center"></ActivityIndicator>
+        <RadListView #list [items]="transactions" [itemTemplateSelector]="templateSelector" (itemTap)="onItemTap($event)" dock="top">
+            <ng-template tkListItemTemplate let-item="item">
+                <GridLayout columns="20, auto, *, auto" rows="auto, auto" class="tran" >
+                    <Label col="0"  colSpan="2"  [text]="item.date | date:'MMMM d y hh:mm'"  textWrap="true"></Label>
+                    <Label col="2" colSpan="2" class="price" >
+                            <FormattedString>
+                                    <Span [text]="(item.price | number:'1.0-2')" color="#1e69f5"></Span>
+                                    <Span [text]="' ' + item.symbol"></Span>
+                            </FormattedString>
+                    </Label>
+                    <Label row="1" col="0" class="icon" [class.income]='item.isIncome' [class.outcome]='!item.isIncome' [text]="item.isIncome? '&#xf358;' : '&#xf35b;' " textWrap="true"></Label>
+                    <Label row="1" col="1" [class]="'status sts_' + item.status" [text]="item.statusTxt" textWrap="true"></Label>
+                    <Label row="1" col="2" class="rate" [text]="((item.price * item.rate) | number:'1.0-2') + ' ' + currencySymbol" textWrap="true"></Label>
+                    <Label row="1" col="3" class="icon"  text="&#xf107;" textWrap="true"></Label>
+                </GridLayout>
+            </ng-template>
+            <ng-template tkTemplateKey="expanded" let-item="item" let-i="index">
+                <StackLayout>
+                    <GridLayout columns="20, auto, *, auto" rows="auto, auto" class="tran" >
+                        <Label col="0"  colSpan="2"  [text]="item.date | date:'MMMM d y hh:mm'"  textWrap="true"></Label>
+                        <Label col="2" colSpan="2" class="price" >
+                                <FormattedString>
+                                        <Span [text]="(item.price | number:'1.0-2')" color="#1e69f5"></Span>
+                                        <Span [text]="' ' + item.symbol"></Span>
+                                </FormattedString>
+                        </Label>
+                        <Label row="1" col="0" class="icon" [class.income]='item.isIncome' [class.outcome]='!item.isIncome' [text]="item.isIncome? '&#xf358;' : '&#xf35b;' " textWrap="true"></Label>
+                        <Label row="1" col="1" [class]="'status sts_' + item.status" [text]="item.statusTxt" textWrap="true"></Label>
+                        <Label row="1" col="2" class="rate" [text]="((item.price * item.rate) | number:'1.0-2') + ' ' + currencySymbol" textWrap="true"></Label>
+                        <Label row="1" col="3" class="icon"  text="&#xf106;" textWrap="true"></Label>
+                    </GridLayout>
+                    <StackLayout class="subview">
+                        <GridLayout columns="auto, auto, *, auto" rows="auto, auto">
+                            <Label col="0" class="bold" text="{{(item.isIncome? 'transaction.from' : 'transaction.sentto') | translate}}" textWrap="true"></Label>
+                            <Label col="1" [text]="item.name" textWrap="true" *ngIf="item.name && item.name.length > 0"></Label>
+                            <Label col="2" [text]="'(' + (item.isIncome? item.from : item.to) + ')'"></Label>
+                            <Label col="3" class="icon tipicon" [class.blue]="tipindex == i" text="&#xf05a;" (tap)="nametip(i)" ></Label>
+                            <Label col="0" colSpan="4" row="1" class="tip" *ngIf="tipindex == i" text="{{'transaction.nametip' | translate}}"  textWrap="true"></Label>
+                        </GridLayout>
+                        <StackLayout  orientation="horizontal">
+                            <Label class="bold" text="{{'transaction.gasfee' | translate}}" textWrap="true"></Label>
+                            <Label [text]="(item.gasfee | number:'1.0-5') + ('transaction.eth' | translate)" textWrap="true"></Label>
+                        </StackLayout>
+                        <StackLayout  orientation="horizontal">
+                            <Label class="bold" text="{{'transaction.description' | translate}}" textWrap="true" *ngIf="item.description && item.description.length > 0"></Label>
+                            <Label [text]="item.description" textWrap="true" *ngIf="item.description && item.description.length > 0"></Label>
+                        </StackLayout>
+                        <Label class="lnk text-center" text="{{'transaction.etherscanlink' | translate}}" textWrap="true" (tap)="goToEtherScan(item.hash)" ></Label>
+                    </StackLayout>
+                    <StackLayout class="hr"></StackLayout>
+                </StackLayout>
+            </ng-template>
+        </RadListView>
+        <GridLayout *ngIf="isEmpty && !isFiltered" columns="*,*" rows="auto, *, auto,  auto" dock="top">
+            <Label col="0" colSpan="2" class="h1 text-center" width="80%" text="{{'pasttransactions.empty.title' | translate}}" textWrap="true"></Label>
+            <Label col="0" row="1" colSpan="2" class="h3 text-center"  width="80%" text="{{'pasttransactions.empty.body' | translate}}" textWrap="true" verticalAlign="top" ></Label>
+            <Label col="0" row="2" colSpan="2" class="h3 text-center" text="{{'pasttransactions.empty.make' | translate}}" textWrap="true" ></Label>
+            <GridLayout col="1" row="3"  columns="*" rows="auto, auto" class="submit-button scan-btn" (tap)="scan()" > 
+                <Label text='&#xf029;'  class="icon" fontSize="36"></Label>
+                <Label row="1" [text]="('account.scan' | translate)" ></Label>
+            </GridLayout>
+            <GridLayout col="0" row="3" columns="*" rows="auto, auto" class="submit-button send-btn" (tap)="send()" > 
+                <Label text='&#xf0aa;'  class="icon" fontSize="36"></Label>
+                <Label row="1" [text]="('account.send' | translate)" ></Label>
+            </GridLayout>
+        </GridLayout>
+    </DockLayout> 
+    <Toast [msg]="submitedMsg"></Toast>
+</AbsoluteLayout>

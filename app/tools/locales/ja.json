@@ -1,0 +1,254 @@
+{
+	"terms": {
+		"actionbar": "PumaPay",
+		"title": "利用規約",
+		"desc": "PumaPayウォレットから既存のEthereumアカウントへアクセス",
+		"accept": "利用規約に合意して進む"
+	},
+	"create": {
+		"title": "新規登録 or 既存のEthereumアカウントへアクセス",
+		"desc": "アカウントへのアクセスは自動生成される以下12個のパスフレーズをお使いください。これはPumaPayのEthereumアカウントアクセスの際のキーになりますので大切に保管ください。",
+		"passhint": "パスワードを入力",
+		"confirmhint": "パスワードを確認",
+		"create": "新規登録",
+		"restore": "既存のEthereumアカウントへアクセス",
+		"copied": "パスフレーズは保護されました",
+		"saveseed": "パスフレーズを保存",
+		"confirm": {
+			"title": "パスフレーズは安全ですか？",
+			"message": "PumaPayはあなたのパスフレーズを弊社のサーバーに保管することはなく、これを紛失した場合復元することは出来ません。アカウント保護のため、パスフレーズを電子記録と物理的な記録両方で記録することをおすすめします。",
+			"ok": "はい、安全です。",
+			"cancel": "キャンセル"
+		}
+	},
+	"login": {
+		"title": "アカウントにアクセス",
+		"passhint": "パスワードを入力",
+		"submit": "ログイン",
+		"restore": "パスフレーズから復元",
+		"or": "OR"
+	},
+	"restore": {
+		"title": "パスフレーズから復元",
+		"passhint": "パスワードを入力",
+		"confirmhint": "パスワードを確認",
+		"access": "アカウントにアクセス",
+		"continue": "続ける",
+		"seedhint": "12個のパスフレーズを入力",
+		"desc": "Ethereumアカウントにアクセスするため12個のパスフレーズを入力",
+		"passdesc": "パスフレーズ保護のためパスワードを生成"
+	},
+	"changepassword": {
+		"title": "パスワード変更",
+		"crrpasshint": "現在のパスワード",
+		"passhint": "新しいパスワード",
+		"confirmhint": "新しいパスワードを確認",
+		"submit": "パスワードを更新"
+	},
+	"nav": {
+		"account": "アカウント",
+		"transactions": "レッジャー",
+		"qr": "QRコード",
+		"partners": "パートナー",
+		"scan": {
+			"cancel": "キャンセル",
+			"msg": "QRコードをスキャン このトランザクションは2分間有効です。"
+		}
+	},
+	"transaction": {
+		"gasfee": "Gas 手数料:",
+		"eth": "ETH",
+		"etherscanlink": "Etherscan上のトランザクション詳細",
+		"completed": "完了",
+		"failed": "失敗",
+		"inprogress": "処理中",
+		"sentto": "Sent to:",
+		"from": "From:",
+		"description": "概要:",
+		"nametip": "このトランザクションに関する名前と情報は事業者が生成したQRコードから提供された内容で、PumaPayはあらゆる情報に関して責任を持ちません。"
+	},
+	"account": {
+		"title": "マイアカウント",
+		"scan": "スキャンリクエスト",
+		"send": "送付",
+		"ethaddress": "Ethereumアドレス",
+		"ethtip": "トークン送付及び受け取りにはEthereumアドレスが必要です。",
+		"balance": "残高",
+		"copied": "コピーする",
+		"viewqr": "QRコードを表示",
+		"popuptitle": "あなたのETHアドレス",
+		"popupcta": "シェア",
+		"token": {
+			"title": "トークン",
+			"visit": "Etherscan.ioにアクセス",
+			"cancel": "キャンセル",
+			"remove": "削除"
+		}
+	},
+	"about": {
+		"title": "アプリについて",
+		"devby": "Developed by",
+		"devbylink": "Decentralized.vision",
+		"pma": "PumaPay",
+		"pmalink": "pumapay.io",
+		"version": "Version 1.1",
+		"versionp": "Version {{version}}"
+	},
+	"settings": {
+		"title": "設定",
+		"preferences": "アカウント設定",
+		"language": "言語",
+		"currency": "通貨設定",
+		"network": "ネットワーク",
+		"privacy": "プライバシー & セキュリティ",
+		"changepass": "パスワード変更",
+		"about": "概要:",
+		"aboutapp": "アプリについて",
+		"terms": "利用規約",
+		"privacypolicy": "プライバシーポリシー",
+		"done": "完了",
+		"logout": "ログアウト",
+		"tokens": "トークン"
+	},
+	"tokens": {
+		"actionbar": "トークン",
+		"title": "トークンの追加または削除",
+		"description": "選択したトークンが残高、トランザクション履歴及び送付オプションに表示されます。",
+		"auto": {
+			"title": "受け取ったトークンを自動で登録",
+			"tip": "有効にした場合、あなたのEthereumアドレスで受け取ったトークンは自動的にウォレットの残高、履歴、送付オプションとして表示されます。"
+		},
+		"addmanualy": "トークンを手動で登録",
+		"search": "人気のトークンを検索"
+	},
+	"addtoken": {
+		"actionbar": "トークンを手動で登録",
+		"cancel": "キャンセル",
+		"submit": "登録",
+		"address": "トークンコントラクトアドレス",
+		"addresstip": "手動入力またはQRコードスキャン",
+		"errors": {
+			"badaddress": "*不正なアドレスです"
+		},
+		"name": "名前",
+		"nametip": "名前を入力",
+		"symbol": "トークンシンボル",
+		"symboltip": "トークンシンボルを入力",
+		"decimals": "Decimals Maximum (桁数)",
+		"decimalstip": "数値を入力"
+	},
+	"transactionsfilter": {
+		"actionbar": "トランザクションをフィルタリング",
+		"reset": "リセット",
+		"apply": "登録",
+		"status": "ステータス",
+		"inprogress": "処理中",
+		"completed": "完了",
+		"failed": "失敗",
+		"direction": "方向",
+		"sent": "送付",
+		"received": "受け取り",
+		"token": "トークン"
+	},
+	"pasttransactions": {
+		"title": "レッジャー",
+		"empty": {
+			"title": "トランザクション履歴ページへようこそ",
+			"body": "トランザクション履歴はありません。トランザクションが生成されましたらこちらに表示されます。",
+			"make": "最初のトランザクションを生成"
+		}
+	},
+	"transactionpreview": {
+		"title": "トランザクションを確定",
+		"submit": "登録",
+		"cancel": "キャンセル",
+		"accepted": "トランザクションは正常に処理されました",
+		"declined": "トランザクションエラー",
+		"received": "正常に処理されました。残高を確認",
+		"wait": "トランザクション処理中です。少々お待ちください。",
+		"currentbalance": "現在の残高:",
+		"willexpire": "有効期限:",
+		"expired": "トランザクションを再度実行",
+		"sendto": "Send to",
+		"amount": "金額",
+		"pma": "PMA",
+		"eth": "ETH",
+		"gasfee": "トランザクション手数料",
+		"gasexplain": "トランザクション手数料はブロックチェーン上での処理を行うマイナーに支払われる対価です。総額はGas LimitとGas Priceによって決定されます: Gas Limitは当該トランザクションで支払われるGasの最大値を指します。Gas PriceはGasユニット毎の価格を指します。Gas Priceが高い程トランザクションは早く処理されます。",
+		"gasestimated": "Gas Limit:",
+		"gasprice": "Gas Price (Gwei)",
+		"nameexplain": "このトランザクションに関する名前と情報は事業者が生成したQRコードから提供された内容で、PumaPayはあらゆる情報に関して責任を持ちません。",
+		"confirm": {
+			"title": "未認証のソースからのトランザクション",
+			"message": "未認証のソースからのトランザクションの実行を承認しますか？",
+			"ok": "はい",
+			"cancel": "キャンセルする"
+		},
+		"alert": {
+			"title": "ネットワークが一致しません",
+			"message": "トランザクションを完了するためにはネットワークを {{network}} に変更する必要があります。 アプリ設定からネットワークを変更して再度トランザクションをスキャンする。",
+			"ok": "はい"
+		},
+		"badqr": {
+			"title": "エラー発生",
+			"message": "QRコードに問題あり",
+			"ok": "再度試す"
+		}
+	},
+	"createtransaction": {
+		"title": "新しいトランザクションを作成",
+		"submit": "登録",
+		"cancel": "キャンセル",
+		"sendto": "ETHアドレスに送る",
+		"hint": "送付先ウォレットアドレス",
+		"amount": "量",
+		"currentbalance": {
+			"pma": "残高:",
+			"eth": "手数料差し引き後の残高:"
+		},
+		"errors": {
+			"badaddress": "* 不明なアドレス",
+			"badamount": "* 残高不足",
+			"badgas": "* 残高不足"
+		}
+	},
+	"partners": {
+		"title": "パートナー",
+		"subtitle": "初期導入パートナー",
+		"check": "詳しく見る"
+	},
+	"generictext": {
+		"terms": {
+			"title": "利用規約"
+		},
+		"privacy": {
+			"title": "プライバシーポリシー"
+		}
+	},
+	"strings": {
+		"symbols": {
+			"usd": "USD",
+			"eur": "EUR",
+			"gbp": "GBP",
+			"jpy": "JPY"
+		},
+		"crypto": {
+			"pma": "PMA",
+			"eth": "ETH"
+		},
+		"langs": {
+			"en": "English",
+			"ja": "Japanese"
+		},
+		"networks": {
+			"1": "Mainnet",
+			"3": "Testnet"
+		}
+	},
+	"errors": {
+		"wrongPassword": "* パスワードが違います",
+		"shortPassword": "* パスワードは最低8文字",
+		"passwordNotMatch": "* パスワードが合致しません",
+		"invalidSeed": "* パスフレーズが不正です"
+	}
+}

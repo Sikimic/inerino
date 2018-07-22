@@ -1,0 +1,107 @@
+{
+    "ropsten": {
+        "PMAETHRate": 50000,
+        "infuraApiKey": "ZDNEJN22wNXziclTLijw",
+        "etherscanApiKey": "C3T9A3UXIQFQMQSIW8R2TIEFF3DJFBBEGS",
+        "gaspriceEstimation": "https://ethgasstation.info/json/ethgasAPI.json",
+        "etherscanHistoryApi": "http://api-ropsten.etherscan.io/api?module=account&action=txlist&apikey=C3T9A3UXIQFQMQSIW8R2TIEFF3DJFBBEGS&startblock=0&endblock=99999999&sort=asc&address=",
+        "etherscanTxUrl": "https://ropsten.etherscan.io/tx/",
+        "symbolTicker": "https://api.infura.io/v1/ticker/",
+        "storageKey": "puma.wallet",
+        "storageTermsKey": "puma.wallet.terms",
+        "storageTransactionsKey": "puma.wallet.tran",
+        "storageSettingsKey": "puma.wallet.settings",
+        "token": {
+            "address": "0x11c1e537801cc1c37ad6e1b7d0bdc0e00fcc6dc1",
+            "abi": [{"constant":false,"inputs":[{"name":"addr","type":"address"},{"name":"state","type":"bool"}],"name":"setTransferAgent","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"mintingFinished","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferRecurrentFrom","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowanceRecurrent","outputs":[{"name":"amount","type":"uint256"},{"name":"start","type":"uint256"},{"name":"duration","type":"uint256"},{"name":"rec","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getAllowancesAddresess","outputs":[{"name":"","type":"address[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_amount","type":"uint256"}],"name":"mint","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_value","type":"uint256"}],"name":"burn","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"string"},{"name":"_symbol","type":"string"}],"name":"updateInfo","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"releaseTokenTransfer","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_subtractedValue","type":"uint256"}],"name":"decreaseApproval","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"finishMinting","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"transferAgents","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"spender","type":"address"},{"name":"start","type":"uint256"},{"name":"duration","type":"uint256"},{"name":"amount","type":"uint256"},{"name":"withdrawalPeriod","type":"uint256"},{"name":"rec","type":"uint256"}],"name":"approveRecurrent","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"released","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"spender","type":"address"}],"name":"removeAllowanceRecurrent","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"addr","type":"address"}],"name":"getTransferAgentState","outputs":[{"name":"state","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_addedValue","type":"uint256"}],"name":"increaseApproval","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"remaining","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"DEF_WITHDRAWAL_PERIOD","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[{"name":"_name","type":"string"},{"name":"_symbol","type":"string"},{"name":"_initialSupply","type":"uint256"},{"name":"_decimals","type":"uint256"},{"name":"_mintable","type":"bool"},{"name":"_released","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"burner","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Burn","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"Mint","type":"event"},{"anonymous":false,"inputs":[],"name":"MintFinished","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"previousOwner","type":"address"},{"indexed":true,"name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"amount","type":"uint256"},{"indexed":false,"name":"start","type":"uint256"},{"indexed":false,"name":"duration","type":"uint256"}],"name":"ApproveRecurrent","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"amount","type":"uint256"},{"indexed":false,"name":"start","type":"uint256"},{"indexed":false,"name":"duration","type":"uint256"}],"name":"RemoveRecurrent","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"TransferRecurrent","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"},{"indexed":true,"name":"spender","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"}]
+        },
+        "locales": "https://s3-eu-west-1.amazonaws.com/pumawalet.locales/",
+        "tempTransactionTimeoutSeconds": 300,
+        "getTransactionStatusInterval": 5000,
+        "validSigners": ["0x23c37e4dbcc064e93e66f7bd59a3080b2f48ce89", "0x20869bd95c192ca67231a52ceb02a089e7e52005", "0x41bbc81089e26615fa7bf7ff2dcd051dff773e54", "0x1f5efade897728238ccd6806c9d97a29759a0217"],
+        "currencyList":  ["usd", "eur", "gbp", "jpy"],
+        "langsList": ["en","ja"],
+        "networksList": [3, 1],
+        "partnersPage": "https://pumapay.io",
+        "transactionTimeoutSeconds": 120,
+        "appsflyer": {
+            "devkey": "U2Ui6kMs48a6ebLdomZWJZ",
+            "appId": "1376601366"
+        },
+        "qrapi": "http://api.qrserver.com/v1/create-qr-code/?data=ethereum:{address}&size=230x230&color=1e69f5&margin=18",
+        "etherscan": {
+            "apikey": "C3T9A3UXIQFQMQSIW8R2TIEFF3DJFBBEGS",
+            "url": "https://api-ropsten.etherscan.io/api",
+            "tokenurl": "https://ropsten.etherscan.io/token/",
+            "txurl": "https://ropsten.etherscan.io/tx/"
+
+        },
+        "jsonrpc": "https://ropsten.infura.io/ZDNEJN22wNXziclTLijw",
+        "erc20": {
+            "tokenicon": "https://s3-eu-west-1.amazonaws.com/pumawalet.locales/icons/{{address}}.png",
+            "defaulticon": "https://s3-eu-west-1.amazonaws.com/pumawalet.locales/icons/eth.png",
+            "ethicon": "https://s3-eu-west-1.amazonaws.com/pumawalet.locales/icons/eth.png",
+            "pma": "https://s3-eu-west-1.amazonaws.com/pumawalet.locales/icons/pma.png",
+            "webscrap": {
+                "use": true,
+                "account_tokens": "https://etherscan.io/address/{{address}}"
+            },
+            "account_tokens": "",
+            "update": "https://s3-eu-west-1.amazonaws.com/pumawalet.locales/erc20.json",
+            "ratesservice": "https://min-api.cryptocompare.com/data/pricemulti?fsyms={{crypto}}&tsyms={{currency}}"
+
+        }
+
+    },
+    "mainnet": {
+        "PMAETHRate": 50000,
+        "infuraApiKey": "ZDNEJN22wNXziclTLijw",
+        "etherscanApiKey": "C3T9A3UXIQFQMQSIW8R2TIEFF3DJFBBEGS",
+        "gaspriceEstimation": "https://ethgasstation.info/json/ethgasAPI.json",
+        "etherscanHistoryApi": "http://api.etherscan.io/api?module=account&action=txlist&apikey=C3T9A3UXIQFQMQSIW8R2TIEFF3DJFBBEGS&startblock=0&endblock=99999999&sort=asc&address=",
+        "etherscanTxUrl": "https://etherscan.io/tx/",
+        "symbolTicker": "https://api.infura.io/v1/ticker/",
+        "storageKey": "puma.wallet",
+        "storageTermsKey": "puma.wallet.terms",
+        "storageTransactionsKey": "puma.wallet.mainnet.tran",
+        "storageSettingsKey": "puma.wallet.settings",
+        "token": {
+            "address": "0x846c66cf71c43f80403b51fe3906b3599d63336f",
+            "abi": [{"constant":true,"inputs":[],"name":"mintingFinished","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_amount","type":"uint256"}],"name":"mint","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_subtractedValue","type":"uint256"}],"name":"decreaseApproval","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"finishMinting","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_addedValue","type":"uint256"}],"name":"increaseApproval","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"Mint","type":"event"},{"anonymous":false,"inputs":[],"name":"MintFinished","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"previousOwner","type":"address"},{"indexed":true,"name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"},{"indexed":true,"name":"spender","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"}]
+        },
+        "locales": "https://s3-eu-west-1.amazonaws.com/pumawalet.locales/",
+        "tempTransactionTimeoutSeconds": 300,
+        "getTransactionStatusInterval": 5000,
+        "validSigners": ["0x23c37e4dbcc064e93e66f7bd59a3080b2f48ce89", "0x20869bd95c192ca67231a52ceb02a089e7e52005", "0x41bbc81089e26615fa7bf7ff2dcd051dff773e54", "0x1f5efade897728238ccd6806c9d97a29759a0217"],
+        "currencyList":  ["usd", "eur", "gbp", "jpy"],
+        "langsList": ["en","ja"],
+        "networksList": [3, 1],
+        "partnersPage": "https://pumapay.io",
+        "transactionTimeoutSeconds": 120,
+        "appsflyer": {
+            "devkey": "U2Ui6kMs48a6ebLdomZWJZ",
+            "appId": "1376601366"
+        },
+        "qrapi": "http://api.qrserver.com/v1/create-qr-code/?data=ethereum:{address}&size=230x230&color=1e69f5&margin=18",
+        "etherscan": {
+            "apikey": "C3T9A3UXIQFQMQSIW8R2TIEFF3DJFBBEGS",
+            "url": "https://api.etherscan.io/api",
+            "tokenurl": "https://etherscan.io/token/",
+            "txurl": "https://etherscan.io/tx/"
+        },
+        "jsonrpc": "https://mainnet.infura.io/ZDNEJN22wNXziclTLijw",
+        "erc20": {
+            "tokenicon": "https://s3-eu-west-1.amazonaws.com/pumawalet.locales/icons/{{address}}.png",
+            "defaulticon": "https://s3-eu-west-1.amazonaws.com/pumawalet.locales/icons/eth.png",
+            "ethicon": "https://s3-eu-west-1.amazonaws.com/pumawalet.locales/icons/eth.png",
+            "pma": "https://s3-eu-west-1.amazonaws.com/pumawalet.locales/icons/pma.png",
+            "webscrap": {
+                "use": true,
+                "account_tokens": "https://etherscan.io/address/{{address}}"
+            },
+            "account_tokens": "",
+            "update": "https://s3-eu-west-1.amazonaws.com/pumawalet.locales/erc20.json",
+            "ratesservice": "https://min-api.cryptocompare.com/data/pricemulti?fsyms={{crypto}}&tsyms={{currency}}"
+        }
+    }
+}

@@ -1,0 +1,62 @@
+<ActionBar class="action-bar">
+    <GridLayout width="100%" horizontalAlignment="left" columns="auto, *" rows="auto">
+        <Image src="res://back" class="action-image" (tap)="goBack()"></Image>
+        <Label col="1" class="action-bar-title text-center" text="{{'settings.title' | translate}}"></Label>
+    </GridLayout>
+</ActionBar>
+
+<AbsoluteLayout>
+    <ScrollView  #root height="100%" width="100%">
+        <StackLayout>
+            <StackLayout class="page">
+                <Label class="h3" text="{{'settings.preferences' | translate}}" textWrap="true"></Label>
+                <GridLayout columns="auto, *" rows="auto, auto, auto, auto" class="dd">
+                    <Label col="0" text="{{'settings.tokens' | translate}}" textWrap="true" [nsRouterLink]="['/home/tokens']"></Label>
+                    <Label col="1" class="text-right icon" text="&#xf105;" textWrap="true" [nsRouterLink]="['/home/tokens']"></Label>
+                    <Label col="0" row="1" text="{{'settings.language' | translate}}" textWrap="true"></Label>
+                    <Label col="1" row="1" class="value" [text]="lang | async" textWrap="true" (tap)="startpick('lang')"></Label>
+                    <Label col="0" row="2" text="{{'settings.currency' | translate}}" textWrap="true"></Label>
+                    <Label col="1" row="2" class="value" [text]="currency | async" textWrap="true" (tap)="startpick('currency')"></Label>
+                    <Label col="0" row="3" text="{{'settings.network' | translate}}" textWrap="true"></Label>
+                    <Label col="1" row="4" class="value" [text]="networkId | async" textWrap="true" (tap)="startpick('net')"></Label>
+                </GridLayout>
+            </StackLayout>
+            <StackLayout class="hr"></StackLayout>
+            <StackLayout class="page">
+                <Label class="h3" text="{{'settings.privacy' | translate}}" textWrap="true"></Label>
+                <GridLayout columns="auto, *" rows="auto" [nsRouterLink]="['/login/change-pass']" pageTransition="slide" class="lnk">
+                    <Label col="0" text="{{'settings.changepass' | translate}}" textWrap="true"></Label>
+                    <Label col="1" class="text-right icon" text="&#xf105;" textWrap="true"></Label>
+                </GridLayout>
+            </StackLayout>
+            <StackLayout class="hr"></StackLayout>
+            <StackLayout class="page">
+                <Label class="h3" text="{{'settings.about' | translate}}" textWrap="true"></Label>
+                <GridLayout columns="auto, *" rows="auto, auto, auto" class="lnk">
+                    <Label col="0" text="{{'settings.aboutapp' | translate}}" textWrap="true" [nsRouterLink]="['/home/about']"></Label>
+                    <Label col="1" class="text-right icon" text="&#xf105;" textWrap="true" [nsRouterLink]="['/home/about']"></Label>
+                    <Label col="0" row="1" text="{{'settings.terms' | translate}}" textWrap="true" [nsRouterLink]="['/home/terms']"></Label>
+                    <Label col="1" row="1" class="text-right icon" text="&#xf105;" textWrap="true" [nsRouterLink]="['/home/terms']"></Label>
+                    <Label col="0" row="2" text="{{'settings.privacypolicy' | translate}}" textWrap="true" [nsRouterLink]="['/home/privacy']"></Label>
+                    <Label col="1" row="2" class="text-right icon" text="&#xf105;" textWrap="true" [nsRouterLink]="['/home/privacy']"></Label>
+                </GridLayout>
+            </StackLayout>
+            <StackLayout class="hr"></StackLayout>
+            <StackLayout class="page">
+                <GridLayout columns="auto, *" rows="auto" class="lnk m-t-20">
+                    <Label col="0" text="{{'settings.logout' | translate}}" textWrap="true" (tap)="logout()"></Label>
+                    <Label col="1" class="text-right icon" text="&#xf2f5;" textWrap="true" (tap)="logout()"></Label>
+                </GridLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+    <DockLayout height="100%" width="100%" stretchLastChild="true" visibility="{{ pick ? 'visible' : 'collapsed' }}">
+        <GridLayout dock="bottom" class="picker" columns="*" rows="auto,auto" verticalAlignment="bottom">
+            <Label row="0" textWrap="true" text="{{'settings.done' | translate}}" (tap)="donepick()" class="done"></Label>
+            <ListPicker row="1" [items]="items" [selectedIndex]="selected" (selectedIndexChange)="selectedIndexChanged($event)" horizontalAlignment="center"
+                verticalAlignment="bottom"></ListPicker>
+        </GridLayout>
+        <StackLayout dock="bottom" class="overlay"></StackLayout>
+    </DockLayout>
+</AbsoluteLayout>

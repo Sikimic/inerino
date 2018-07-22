@@ -1,0 +1,25 @@
+.icon-button{
+  color: #929292;
+  background-color: rgba(248, 248, 248, 0.8);
+  font-size: 10;
+  vertical-align: center;
+  font-family: 'Heebo';
+  font-weight: 400;
+  text-align: center;
+  height: 58;
+}
+
+.icon-button .icon{
+  font-family: "Font Awesome 5 Free" ,"fa-solid-900","fa-regular-400","fa-brands-400";
+  font-weight: 900;
+  font-size: 18;
+}
+
+.icon-button.active {
+  color: #1e69f5;
+}
+GridLayout.bottom {
+  background-color: rgba(248, 248, 248, 0.8);
+  border-top-width: 1;
+  border-top-color: rgba(0, 0, 0, 0.3);
+}

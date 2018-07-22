@@ -1,0 +1,40 @@
+<AbsoluteLayout>
+    
+    <StackLayout class="page"  height="100%" width="100%">
+        <StackLayout height="100%"  visibility="{{ (state == 2) ? 'visible' : 'collapsed' }}">
+            <DockLayout height="100%" stretchLastChild="true">
+                <StackLayout dock="bottom">
+                
+                    <Button text="{{'create.create' | translate}}" class="submit-button" (tap)="submit()"></Button>
+                    <Label class="orlbl text-center" text="{{'login.or' | translate}}"></Label>
+                    <Button text="{{'create.restore' | translate}}" class="link  m-b-10" [nsRouterLink]="['/login/restore']" ></Button>
+                </StackLayout>
+                <StackLayout dock="top">
+                    <Image src="res://logo_login"  stretch="aspectFit" horizontalAlignment="center"></Image>
+                    <Label class="h2 text-center p-b-20" text="{{'create.title' | translate}}" textWrap="true"></Label>
+                    <TextField  hint="{{ 'create.passhint' | translate}}" secure="true" [(ngModel)]="password"></TextField>
+                    <TextField  hint="{{ 'create.confirmhint' | translate}}" secure="true" [(ngModel)]="confirmPassword"></TextField>
+                    <Label [text]="errorTxt" class="error" textWrap="true" *ngIf="hasError"></Label>
+                </StackLayout>
+            </DockLayout>
+        </StackLayout>
+
+        <StackLayout  height="100%"  visibility="{{ (state == 4) ? 'visible' : 'collapsed' }}">
+            <DockLayout height="100%" stretchLastChild="true">
+                <StackLayout dock="bottom">
+                    <Button text="{{'create.copied' | translate}}" class="submit-button m-b-30" (tap)="onGotoHome()" ></Button>
+                </StackLayout>
+                <StackLayout dock="top" (tap)="blur($event)">
+                    <Image src="res://logo_login"   stretch="aspectFit" horizontalAlignment="center"></Image>
+                    <Label class="h2 text-center" text="{{'create.saveseed' | translate}}"></Label>
+                    <Label class="body text-center m-b-10" text="{{'create.desc' | translate}}"  textWrap="true"></Label>
+                    <GridLayout class="mnemonic-cnt"  columns="*" rows="100, auto">
+                        <TextView #mtext (tap)="tblur($event)" class="mnemonic" [text]="mnemonic"></TextView>
+                        <Label row="1" class="icon text-right" [class.blue]="copied"  text="&#xf0c5;" (tap)="copy()"></Label>
+                    </GridLayout>
+                </StackLayout>
+            </DockLayout>
+        </StackLayout>
+    </StackLayout>
+    <Toast isShow="true"></Toast>
+<AbsoluteLayout
